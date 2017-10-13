@@ -1,0 +1,52 @@
+@import "../common/css/mixin.styl";
+
+/**
+  导航
+**/
+.home-nav
+  width: 100%
+  padding: 10px 0
+  box-shadow(0 3px 3px #ddd)
+  .stair
+    padding: 0 10% 0 2%
+    ul
+      display: flex
+      align-items: center
+      li
+        flex: 1
+        text-align: center
+        &:first-child
+          width: 30px
+          height: 30px
+          background-color: #0b97c4
+        &.eng
+          padding-top: 2px;
+  .second
+    width: 100%
+    margin-top: 1.6rem;
+    ul
+      display: flex
+      align-items: center
+      justify-content: center
+      li
+        flex: 1
+        text-align: center
+        div
+          width: 2.8rem
+          height: 2.8rem
+          line-height: 3rem;
+          margin: 0 auto
+          border: 1px solid #40b0ef
+          border-radius(50%)
+          text-align: center
+          i
+            font-size: 1.7rem
+            color: #40b0ef
+        p
+          padding-top: .5rem;
+          font-size: 1.2rem
+/**
+  内容区
+**/
+.home
+  height: 1000px

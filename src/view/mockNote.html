@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%= require('html-loader!./layout/head-cmn.html')%>
+  <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+  <section class="mock-note">
+    <%= require('html-loader!./layout/header.html')%>
+    <div class="m-note-wrap"></div>
+    <button class="mock-start bColor">开始</button>
+  </section>
+</body>
+</html>

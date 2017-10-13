@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%= require('html-loader!./layout/head-cmn.html')%>
+  <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+  <%= require('html-loader!./layout/header.html')%>
+  <section class="exercise">
+    <!--遮罩层-->
+    <div class="p-shade"></div>
+    <ul class="p-tag-list exer-list border-1px">
+      <li class="active" data-major="reading">阅读</li>
+      <li data-major="writing">文法</li>
+      <li data-major="math">数学</li>
+    </ul>
+    <ul class="p-tag-cnt exer-cnt">
+
+    </ul>
+  </section>
+  <!--底部导航-->
+  <%= require('html-loader!./layout/footer.html') %>
+</body>
+</html>

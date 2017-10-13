@@ -1,0 +1,44 @@
+@import "../css/mixin.styl";
+
+.header
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 9
+  b-color()
+  &>ul
+    padding: 0 2rem
+    display: flex
+    align-items: center
+    li
+      flex: 1
+      l-height(4rem)
+      color: #fff
+      font-size: 1.8rem
+      &:nth-child(2)
+        text-align: center
+      &:last-child
+        text-align: right;
+        i
+          font-size: 2.2rem
+.header-nav
+  position: fixed
+  width: 100%
+  top: 4rem
+  left: 0
+  background-color: #fff
+  display: none
+  box-shadow(0 3px 5px #ddd)
+  z-index: 2
+  &.active
+    display: block
+  &>ul
+    padding: 1rem 1.5rem 0 1.5rem
+    display: flex
+    flex-wrap: wrap
+    li
+      margin: 0 .5rem .8rem 0
+      padding: .3rem 1rem
+      border: 1px solid #40b0ef
+      border-radius(.5rem)

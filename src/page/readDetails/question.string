@@ -1,0 +1,94 @@
+<!--问题-->
+{{#dataList}}
+  {{#data}}
+    <div class="read-question" data-qid={{qid}} data-num={{number}}>
+      <span class="fl">{{number}}.</span>
+      <div>{{{content}}}</div>
+    </div>
+    <!--答案选项-->
+    {{^isFilling}}
+    <ul class='select-wrap'>
+      <li class="read-li clearfix" data-ans="A">
+        <div class="read-select fl"></div>
+        <div class="read-answer">{{{keyA}}}</div>
+      </li>
+      <li class="read-li clearfix" data-ans="B">
+        <div class="read-select fl"></div>
+        <div class="read-answer">{{{keyB}}}</div>
+      </li>
+      <li class="read-li clearfix" data-ans="C">
+        <div class="read-select fl"></div>
+        <div class="read-answer">{{{keyC}}}</div>
+      </li>
+      <li class="read-li clearfix" data-ans="D">
+        <div class="read-select fl"></div>
+        <div class="read-answer">{{{keyD}}}</div>
+      </li>
+    </ul>
+    {{/isFilling}}
+    <!--数学填空-->
+    {{#isFilling}}
+      <div class="math-gap">
+        <input type="text">
+      </div>
+      <div class="math-panel">
+        <table>
+          <tr>
+            <th colspan="2" class="math-value"></th>
+            <th colspan="2">
+              <button class="math-del">X</button>
+              <button class="math-sure">确定</button>
+            </th>
+          </tr>
+          <tr>
+            <td class="math-btn">1</td>
+            <td class="math-btn">2</td>
+            <td class="math-btn">3</td>
+            <td class="math-btn">.</td>
+          </tr>
+          <tr>
+            <td class="math-btn">4</td>
+            <td class="math-btn">5</td>
+            <td class="math-btn">6</td>
+            <td class="math-btn">/</td>
+          </tr>
+          <tr>
+            <td class="math-btn">7</td>
+            <td class="math-btn">8</td>
+            <td class="math-btn">9</td>
+            <td class="math-btn">0</td>
+          </tr>
+        </table>
+      </div>
+    {{/isFilling}}
+  {{/data}}
+  <div class="read-progress clearfix">
+    <p class="fl read-check">查看解析</p>
+    <p class="fr">{{n}}</p>
+  </div>
+  <!--答案解析-->
+  {{#data}}
+    <div class="read-analytic active">
+      <p>答案:<span>{{answer}}</span></p>
+      <div>{{analysis}}</div>
+    </div>
+  {{/data}}
+  <!--题目底部-->
+  <div class="read-footer border-1px">
+    <div class="p-cmn-next read-prev" data-name="up">上一题</div>
+    <div class="read-out"><i class="fa fa-power-off">离开</i></div>
+    <div class="read-time"><i class="fa fa-clock-o">12:00</i></div>
+    <div class="p-cnn-next read-next" data-name="next">下一题</div>
+  </div>
+  {{#data}}
+    {{#section}}
+      <input type="hidden" id="j-section" data-sec={{section}}>
+    {{/section}}
+  {{/data}}
+  {{#nextId}}
+      <input type="hidden" id="j-nextId" data-next={{nextId}}>
+    {{/nextId}}
+    {{^nextId}}
+        <input type="hidden" id="j-nextSection" data-next={{nextSection}}>
+    {{/nextId}}
+{{/dataList}}

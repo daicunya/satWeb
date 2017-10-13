@@ -1,0 +1,51 @@
+b-top-1px($color)
+  position: relative
+  &:after
+    position: absolute
+    left: 0
+    top: 0
+    display: block
+    content: ''
+    width: 100%
+    border: 1px solid $color
+b-bottom-1px($color)
+  position: relative
+  &:after
+    position: absolute
+    left: 0
+    bottom: 0
+    display: block
+    content: ''
+    width: 100%
+    border: 1px solid $color
+border-radius($per)
+  -webkit-border-radius: $per
+  -moz-border-radius: $per
+  border-radius: $per
+box-shadow()
+  -webkit-box-shadow: arguments
+  -moz-box-shadow: arguments
+  box-shadow: arguments
+b-color()
+  background-color: #40b0ef
+f-color()
+  color: #40b0ef
+l-height($h)
+  height: $h
+  line-height: $h;
+transition()
+  -webkit-transition: arguments
+  -moz-transition: arguments
+  -ms-transition: arguments
+  -o-transition: arguments
+  transition: arguments
+trans-xy($x,$y)
+  -webkit-transform: translate($x,$y)
+  -moz-transform: translate($x,$y)
+  -ms-transform: translate($x,$y)
+  -o-transform: translate($x,$y)
+  transform: translate($x,$y)
+border-box()
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box

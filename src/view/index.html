@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%= require('html-loader!./layout/head-cmn.html')%>
+  <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+  <!--头部导航-->
+  <nav class="home-nav">
+    <div class="stair">
+      <ul>
+        <li></li>
+        <li class="eng"><a href="#">SAT</a></li>
+        <li class="eng"><a href="#">GMAT</a></li>
+        <li><a href="#">托福</a></li>
+        <li><a href="#">雅思</a></li>
+        <li><a href="#">留学</a></li>
+      </ul>
+    </div>
+    <div class="second">
+      <ul>
+        <li><a href="./exercise.html">
+          <div><i class="fa fa-pencil"></i></div>
+          <p>做题</p>
+        </a></li>
+        <li><a href="#">
+          <div><i class="fa fa-paper-plane"></i></div>
+          <p>测评</p>
+        </a></li>
+        <li><a href="./mock.html">
+          <div><i class="fa fa-file-text"></i></div>
+          <p>模考</p>
+        </a></li>
+        <li><a href="#">
+          <div><i class="fa fa-lightbulb-o"></i></div>
+          <p>知识库</p>
+        </a></li>
+        <li><a href="#">
+          <div><i class="fa fa-book"></i></div>
+          <p>课程</p>
+        </a></li>
+      </ul>
+    </div>
+  </nav>
+  <!--内容区-->
+  <section class="home">
+    <%= require('html-loader!./layout/slider.html')%>
+  </section>
+  <!--底部导航-->
+  <%= require('html-loader!./layout/footer.html') %>
+</body>
+</html>

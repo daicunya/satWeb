@@ -1,0 +1,218 @@
+<!--阅读-->
+{{#list}}
+  <li class="exer-cnt-item">
+    <dl class="exer-dl">
+      <dt>OG</dt>
+      <!--data-tid  试卷tid-->
+      {{#OG}}
+        <dd>
+          <div class="j-inner-div clearfix">
+            <span class="fl">{{name}}</span>
+            <span class="fr"><i class="fa fa-angle-down"></i></span>
+          </div>
+          <ul class="inner-list">
+            <li><a href='./readdetails.html?type=exercise&major=Reading&num=1&tid={{id}}'>reading01</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Reading&num=2&tid={{id}}'>reading02</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Reading&num=3&tid={{id}}'>reading03</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Reading&num=4&tid={{id}}'>reading04</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Reading&num=5&tid={{id}}'>reading05</a></li>
+          </ul>
+        </dd>
+      {{/OG}}
+    </dl>
+    <dl class="exer-dl">
+      <dt>普林斯顿</dt>
+      {{#princeton}}
+          <dd>
+            <div class="j-inner-div clearfix">
+              <span class="fl">{{name}}</span>
+              <span class="fr"><i class="fa fa-angle-down"></i></span>
+            </div>
+            <ul class="inner-list">
+              <li><a href='./readdetails.html?type=exercise&major=Reading&num=1&tid={{id}}'>reading01</a></li>
+              <li><a href='./readdetails.html?type=exercise&major=Reading&num=2&tid={{id}}'>reading02</a></li>
+              <li><a href='./readdetails.html?type=exercise&major=Reading&num=3&tid={{id}}'>reading03</a></li>
+              <li><a href='./readdetails.html?type=exercise&major=Reading&num=4&tid={{id}}'>reading04</a></li>
+              <li><a href='./readdetails.html?type=exercise&major=Reading&num=5&tid={{id}}'>reading05</a></li>
+            </ul>
+          </dd>
+      {{/princeton}}
+    </dl>
+    <dl class="exer-dl">
+      <dt>开普兰</dt>
+      {{#kaplan}}
+        <dd>
+          <div class="j-inner-div clearfix">
+            <span class="fl">{{name}}</span>
+            <span class="fr"><i class="fa fa-angle-down"></i></span>
+          </div>
+          <ul class="inner-list">
+            <li><a href='./readdetails.html?type=exercise&major=Reading&num=1&tid={{id}}'>reading01</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Reading&num=2&tid={{id}}'>reading02</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Reading&num=3&tid={{id}}'>reading03</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Reading&num=4&tid={{id}}'>reading04</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Reading&num=5&tid={{id}}'>reading05</a></li>
+          </ul>
+        </dd>
+      {{/kaplan}}
+    </dl>
+    <dl class="exer-dl">
+      <dt>BARRON</dt>
+      {{#BARRON}}
+        <dd>
+          <div class="j-inner-div clearfix">
+            <span class="fl">{{name}}</span>
+            <span class="fr"><i class="fa fa-angle-down"></i></span>
+          </div>
+          <ul class="inner-list">
+            <li><a href='./readdetails.html?type=exercise&major=Reading&num=1&tid={{id}}'>reading01</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Reading&num=2&tid={{id}}'>reading02</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Reading&num=3&tid={{id}}'>reading03</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Reading&num=4&tid={{id}}'>reading04</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Reading&num=5&tid={{id}}'>reading05</a></li>
+          </ul>
+        </dd>
+      {{/BARRON}}
+    </dl>
+  </li>
+{{/list}}
+<!--文法-->
+{{#list}}
+  <li class="exer-cnt-item">
+    <dl class="exer-dl">
+      <dt>OG</dt>
+      <!--data-tid  试卷tid-->
+      {{#OG}}
+        <dd>
+          <div class="j-inner-div clearfix">
+            <span class="fl">{{name}}</span>
+            <span class="fr"><i class="fa fa-angle-down"></i></span>
+          </div>
+          <ul class="inner-list">
+            <li><a href='./readdetails.html?type=exercise&major=Writing&num=1&tid={{id}}'>writing01</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Writing&num=2&tid={{id}}'>writing02</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Writing&num=3&tid={{id}}'>writing03</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Writing&num=4&tid={{id}}'>writing04</a></li>
+          </ul>
+        </dd>
+      {{/OG}}
+    </dl>
+    <dl class="exer-dl">
+      <dt>普林斯顿</dt>
+      {{#princeton}}
+          <dd data-tid={{id}}>
+            <div class="j-inner-div clearfix">
+              <span class="fl">{{name}}</span>
+              <span class="fr"><i class="fa fa-angle-down"></i></span>
+            </div>
+            <ul class="inner-list">
+              <li><a href='./readdetails.html?type=exercise&major=Writing&num=1&tid={{id}}'>writing01</a></li>
+              <li><a href='./readdetails.html?type=exercise&major=Writing&num=2&tid={{id}}'>writing02</a></li>
+              <li><a href='./readdetails.html?type=exercise&major=Writing&num=3&tid={{id}}'>writing03</a></li>
+              <li><a href='./readdetails.html?type=exercise&major=Writing&num=4&tid={{id}}'>writing04</a></li>
+            </ul>
+          </dd>
+      {{/princeton}}
+    </dl>
+    <dl class="exer-dl">
+      <dt>开普兰</dt>
+      {{#kaplan}}
+        <dd data-tid={{id}}>
+          <div class="j-inner-div clearfix">
+            <span class="fl">{{name}}</span>
+            <span class="fr"><i class="fa fa-angle-down"></i></span>
+          </div>
+          <ul class="inner-list">
+            <li><a href='./readdetails.html?type=exercise&major=Writing&num=1&tid={{id}}'>writing01</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Writing&num=2&tid={{id}}'>writing02</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Writing&num=3&tid={{id}}'>writing03</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Writing&num=4&tid={{id}}'>writing04</a></li>
+          </ul>
+        </dd>
+      {{/kaplan}}
+    </dl>
+    <dl class="exer-dl">
+      <dt>BARRON</dt>
+      {{#BARRON}}
+        <dd data-tid={{id}}>
+          <div class="j-inner-div clearfix">
+            <span class="fl">{{name}}</span>
+            <span class="fr"><i class="fa fa-angle-down"></i></span>
+          </div>
+          <ul class="inner-list">
+            <li><a href='./readdetails.html?type=exercise&major=Writing&num=1&tid={{id}}'>writing01</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Writing&num=2&tid={{id}}'>writing02</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Writing&num=3&tid={{id}}'>writing03</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Writing&num=4&tid={{id}}'>writing04</a></li>
+          </ul>
+        </dd>
+      {{/BARRON}}
+    </dl>
+  </li>
+{{/list}}
+<!--数学-->
+{{#list}}
+<li class="exer-cnt-item">
+  <dl class="exer-dl">
+    <dt>OG</dt>
+    <!--data-tid  试卷tid-->
+    {{#OG}}
+    <dd data-tid={{id}}>
+      <div class="j-inner-div clearfix">
+        <span class="fl">{{name}}</span>
+        <span class="fr"><i class="fa fa-angle-down"></i></span>
+      </div>
+      <ul class="inner-list">
+        <li><a href='./readdetails.html?type=exercise&major=Math1&tid={{id}}'>No Calculator</a></li>
+        <li><a href='./readdetails.html?type=exercise&major=Math2&tid={{id}}'>Calculator</a></li>
+      </ul>
+    </dd>
+    {{/OG}}
+  </dl>
+  <dl class="exer-dl">
+    <dt>普林斯顿</dt>
+    {{#princeton}}
+    <dd data-tid={{id}}>
+      <div class="j-inner-div clearfix">
+        <span class="fl">{{name}}</span>
+        <span class="fr"><i class="fa fa-angle-down"></i></span>
+      </div>
+      <ul class="inner-list">
+        <li><a href='./readdetails.html?type=exercise&major=Math1&tid={{id}}'>No Calculator</a></li>
+        <li><a href='./readdetails.html?type=exercise&major=Math2&tid={{id}}'>Calculator</a></li>
+      </ul>
+    </dd>
+    {{/princeton}}
+  </dl>
+  <dl class="exer-dl">
+    <dt>开普兰</dt>
+    {{#kaplan}}
+    <dd data-tid={{id}}>
+      <div class="j-inner-div clearfix">
+        <span class="fl">{{name}}</span>
+        <span class="fr"><i class="fa fa-angle-down"></i></span>
+      </div>
+      <ul class="inner-list">
+        <li><a href='./readdetails.html?type=exercise&major=Math1&tid={{id}}'>No Calculator</a></li>
+        <li><a href='./readdetails.html?type=exercise&major=Math2&tid={{id}}'>Calculator</a></li>
+      </ul>
+    </dd>
+    {{/kaplan}}
+  </dl>
+  <dl class="exer-dl">
+    <dt>BARRON</dt>
+    {{#BARRON}}
+    <dd data-tid={{id}}>
+      <div class="j-inner-div clearfix">
+        <span class="fl">{{name}}</span>
+        <span class="fr"><i class="fa fa-angle-down"></i></span>
+      </div>
+      <ul class="inner-list">
+        <li><a href='./readdetails.html?type=exercise&major=Math1&tid={{id}}'>No Calculator</a></li>
+        <li><a href='./readdetails.html?type=exercise&major=Math2&tid={{id}}'>Calculator</a></li>
+      </ul>
+    </dd>
+    {{/BARRON}}
+  </dl>
+</li>
+{{/list}}

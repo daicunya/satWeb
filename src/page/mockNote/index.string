@@ -1,0 +1,26 @@
+{{#dataList}}
+  {{^evaulation}}
+  <ul class="m-note-ul mock-general">
+    {{#Reading}}
+      <li><i class='fa'></i>阅读部分:共{{count}}题,{{time}}分钟</li>
+    {{/Reading}}
+    {{#Writing}}
+      <li><i></i>文法部分:共{{count}}题,{{time}}分钟</li>
+    {{/Writing}}
+    {{#Math}}
+      <li><i></i>数学部分:共58题，其中20道题无计算器，
+      25分钟；38道题可使用计算器，55分钟</li>
+    {{/Math}}
+    {{#total}}
+      <li class="mock-last-li">共计{{count}}题，限时{{time}}分钟</li>
+    {{/total}}
+  </ul>
+  {{/evaulation}}
+  {{#evaulation}}
+    <ul class="m-note-ul evaulation">
+      <li>测评内容: 词汇、语法填空、句子翻译、阅读理解、数学</li>
+      <li>测评时间: 120mins.各部分时间自行分配。</li>
+      <li>测评总分: 120分</li>
+    </ul>
+  {{/evaulation}}
+{{/dataList}}
