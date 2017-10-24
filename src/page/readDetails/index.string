@@ -46,6 +46,9 @@
       <div class="math-gap">
         <input type="text">
       </div>
+      <div class="textarea-gap">
+        <textarea placeholder="请在此输入……"></textarea>
+      </div>
       <div class="math-panel">
         <table>
           <tr>
@@ -90,9 +93,10 @@
       {{^section}}
         <div class="p-cmn-next read-prev" data-name="up">上一题</div>
       {{/section}}
-      <div class="read-out"><i class="fa fa-power-off">离开</i></div>
-      <div class="read-time"><i class="fa fa-clock-o">12:00</i></div>
+      <div class="read-out"><i class="fa fa-power-off"></i>离开</div>
+      <div class="read-time"><i class="fa fa-clock-o"></i><span>00:00:00</span></div>
       <div class="p-cnn-next read-next" data-name="next">下一题</div>
+      <div class="p-cnn-next read-submit" data-name="submit" style="display:none">提交</div>
     </div>
   {{/data}}
   {{#data}}
@@ -100,6 +104,7 @@
       <input type="hidden" id="j-section" data-sec={{section}}>
     {{/section}}
   {{/data}}
+  <!--用以判断模考是否进入下一小节-->
   {{#nextId}}
     <input type="hidden" id="j-nextId" data-next={{nextId}}>
   {{/nextId}}
@@ -107,12 +112,27 @@
      <input type="hidden" id="j-nextSection" data-next={{nextSection}}>
   {{/nextId}}
 </li>
+<!--弹窗-->
+<div class="read-window">
+  <div class="read-win-wrap ">
+    <p class="read-win-text">五分钟休息时间,点击继续进入下一小节</p>
+    <p class="read-win-time"><i class="fa fa-hourglass-start"></i><span>05:00</span></p>
+    <p class="read-win-continue">继续</p>
+  </div>
+  <div class="read-win-out">
+    <p class="read-win-text">确定不再继续做题了吗???</p>
+    <ul class="read-win-select">
+      <li class="read-get-out">退出</li>
+      <li class="read-do-work read-win-continue">做题</li>
+    </ul>
+  </div>
+</div>
 {{#data}}
   {{#section}}
     <input type="hidden" id="j-section" data-sec={{section}}>
   {{/section}}
   {{#tpId}}
-    <input type="hidden" id="j-tpId" data-tpId={{tpId}}>
+    <input type="hidden" id="j-tpId" data-tpid={{tpId}}>
   {{/tpId}}
   {{#id}}
     <input type="hidden" id="j-id" data-id={{id}}>

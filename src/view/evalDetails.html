@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%= require('html-loader!./layout/head-cmn.html')%>
+  <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+<section>
+  <div class="p-shade"></div>
+  <ul class="p-tag-list exer-list read-list border-1px">
+    <li class="active">原文</li>
+    <li >题目</li>
+  </ul>
+  <ul class="p-tag-cnt exer-cnt read-ul">
+    <!--原文-->
+    <li class="exer-cnt-item read-original">
+      <h3></h3>
+      <h5></h5>
+      <div class="read-wrap clearfix">
+        <!--行号-->
+        <div class="read-line fl"></div>
+        <!--文章-->
+        <div class="read-cnt"></div>
+      </div>
+    </li>
+    <!--题目-->
+    <li class="exer-cnt-item read-ti">
+      <!--问题-->
+      <div class="read-question" data-qid={{qid}} data-num={{number}}>
+        <span class="fl">2.</span>
+        <div></div>
+      </div>
+      <!--答案选项-->
+      <ul class='select-wrap'>
+        <li class="read-li clearfix" data-ans="A">
+          <div class="read-select fl"></div>
+          <div class="read-answer">A</div>
+        </li>
+        <li class="read-li clearfix" data-ans="B">
+          <div class="read-select fl"></div>
+          <div class="read-answer">B</div>
+        </li>
+        <li class="read-li clearfix" data-ans="C">
+          <div class="read-select fl"></div>
+          <div class="read-answer">C</div>
+        </li>
+        <li class="read-li clearfix" data-ans="D">
+          <div class="read-select fl"></div>
+          <div class="read-answer">D</div>
+        </li>
+      </ul>
+      <!--数学填空-->
+      <div class="math-gap">
+        <input type="text">
+      </div>
+      <div class="math-panel">
+        <table>
+          <tr>
+            <th colspan="2" class="math-value"></th>
+            <th colspan="2">
+              <button class="math-del">X</button>
+              <button class="math-sure">确定</button>
+            </th>
+          </tr>
+          <tr>
+            <td class="math-btn">1</td>
+            <td class="math-btn">2</td>
+            <td class="math-btn">3</td>
+            <td class="math-btn">.</td>
+          </tr>
+          <tr>
+            <td class="math-btn">4</td>
+            <td class="math-btn">5</td>
+            <td class="math-btn">6</td>
+            <td class="math-btn">/</td>
+          </tr>
+          <tr>
+            <td class="math-btn">7</td>
+            <td class="math-btn">8</td>
+            <td class="math-btn">9</td>
+            <td class="math-btn">0</td>
+          </tr>
+        </table>
+      </div>
+      <div class="read-progress clearfix">
+        <p class="fl read-check">查看解析</p>
+        <p class="fr">2/11</p>
+      </div>
+      <!--答案解析-->
+      <div class="read-analytic active">
+        <p>答案:<span>A</span></p>
+        <div>DDDDDD</div>
+      </div>
+      <!--题目底部-->
+      <div class="read-footer border-1px">
+        <div class="p-cmn-next read-prev" data-name="up">上一题</div>
+        <div class="read-out"><i class="fa fa-power-off"></i>离开</div>
+        <div class="read-time"><i class="fa fa-clock-o"></i><span>00:00:00</span></div>
+        <div class="p-cnn-next read-next" data-name="next">下一题</div>
+        <div class="p-cnn-next read-submit" data-name="submit" style="display:none">提交</div>
+      </div>
+      <!--<input type="hidden" id="j-section" data-sec="">-->
+      <!--用以判断模考是否进入下一小节-->
+      <!--<input type="hidden" id="j-nextId" data-next={{nextId}}>-->
+      <!--<input type="hidden" id="j-nextSection" data-next={{nextSection}}>-->
+    </li>
+    <!--弹窗-->
+    <div class="read-window">
+      <div class="read-win-wrap ">
+        <p class="read-win-text">五分钟休息时间,点击继续进入下一小节</p>
+        <p class="read-win-time"><i class="fa fa-hourglass-start"></i><span>05:00</span></p>
+        <p class="read-win-continue">继续</p>
+      </div>
+      <div class="read-win-out">
+        <p class="read-win-text">确定不再继续做题了吗???</p>
+        <ul class="read-win-select">
+          <li class="read-get-out">退出</li>
+          <li class="read-do-work read-win-continue">做题</li>
+        </ul>
+      </div>
+    </div>
+  </ul>
+</section>
+</body>
+</html>

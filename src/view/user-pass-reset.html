@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%= require('html-loader!./layout/head-cmn.html')%>
+  <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+<!--头部导航-->
+<%= require('html-loader!./layout/header.html')%>
+<!--内容区-->
+<section class="psreset">
+  <div class="container">
+    <div class="in-box">
+      <div class="reg-info">
+        <ul>
+          <li>
+            <div class="input-phone">
+              <i class="fa fa-phone"></i>
+              <input type="text" placeholder="请输入你的手机号" datatype="m" errormsg="手机号格式不正确!" id="phone"/>
+              <span class="validform-checktip validform-wrong">请填写信息！</span>
+            </div>
+            <div class="input-code-btn">
+              <input type="button" value="验证码" />
+            </div>
+          </li>
+          <li>
+            <i class="fa fa-code"></i>
+            <input type="text" placeholder="请输入你的验证码" datatype="*" errormsg="验证码不能为空！" id="code_yz"/>
+            <span class="validform-checktip validform-wrong">请填写信息！</span>
+          </li>
+          <li>
+            <i class="fa fa-lock"></i>
+            <input type="password" placeholder="请输入新密码" name="userpassword" class="inputxt" datatype="*6-16" nullmsg="请填写密码！" errormsg="密码范围在6~16位之间！" id="password"/>
+            <span class="validform-checktip validform-wrong">请填写信息！</span>
+          </li>
+          <li>
+            <i class="fa fa-lock"></i>
+            <input type="password" placeholder="请确认你的密码" name="userpassword2" class="inputxt Validform_error" datatype="*6-16" recheck="userpassword" nullmsg="请确认密码！" id="repass"/>
+            <span class="validform-checktip validform-wrong">请填写信息！</span>
+          </li>
+        </ul>
+      </div>
+      <input class="sub-btn" type="button" value="提交" id="regBtn" />
+    </div>
+  </div>
+</section>
+<!--底部导航-->
+<%= require('html-loader!./layout/footer.html') %>
+</body>
+</html>

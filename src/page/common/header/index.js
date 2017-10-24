@@ -31,6 +31,18 @@ var _header = {
       $('.p-title').html('名师团队');
     } else if (tName.indexOf('mock') != -1) {
       $('.p-title').html('模考');
+    } else if (tName.indexOf('report') != -1) {
+      $('.p-title').html('报告')
+    } else if (tName.indexOf('user-login') != -1) {
+      $('.p-title').html('登录')
+    } else if (tName.indexOf('user-register') != -1) {
+      $('.p-title').html('注册')
+    } else if (tName.indexOf('user-pass-update') != -1) {
+      $('.p-title').html('修改密码')
+    } else if (tName.indexOf('user-pass-reset') != -1) {
+      $('.p-title').html('找回密码')
+    } else if (tName.indexOf('search') != -1) {
+      $('.p-title').html('搜索')
     }
   },
   bindEvent: function () {

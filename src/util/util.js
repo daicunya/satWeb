@@ -12,6 +12,9 @@ var _util = {
   //  网络请求
   request : function(param){
     var _this = this;
+    $.ajaxSettings.beforeSend = function(xhr) {
+      xhr.withCredentials = true;
+    };
     $.ajax({
       type        : param.method  || 'post',
       url         : param.url     || '',

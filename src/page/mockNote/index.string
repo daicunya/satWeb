@@ -19,7 +19,7 @@
   {{#evaulation}}
     <ul class="m-note-ul evaulation">
       <li>测评内容: 词汇、语法填空、句子翻译、阅读理解、数学</li>
-      <li>测评时间: 120mins.各部分时间自行分配。</li>
+      <li>测评时间: 120分钟,各部分时间自行分配。</li>
       <li>测评总分: 120分</li>
     </ul>
   {{/evaulation}}

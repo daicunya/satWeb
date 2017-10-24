@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%= require('html-loader!./layout/head-cmn.html')%>
+  <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+<!--头部导航-->
+<%= require('html-loader!./layout/header.html')%>
+<!--内容区-->
+<section class="psupdate">
+
+</section>
+<!--底部导航-->
+<%= require('html-loader!./layout/footer.html') %>
+</body>
+</html>

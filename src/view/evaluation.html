@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%= require('html-loader!./layout/head-cmn.html')%>
+  <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+<%= require('html-loader!./layout/header.html')%>
+<section class="evaulation">
+  <div class="eval-wrap">
+    <ul>
+      <li>
+        <h2>初级卷</h2>
+        <p>SAT零基础/高中英语60-90分题目难度800分以下</p>
+        <a href="#">GO</a>
+      </li>
+      <li>
+        <h2>中级卷</h2>
+        <p>SAT零基础/高中英语90-120分题目难度800-1000分</p>
+        <a href="#">GO</a>
+      </li>
+      <li>
+        <h2>高级卷</h2>
+        <p>考过SAT/高中英语120分以上题目难度1000-1200分</p>
+        <a href="#">GO</a>
+      </li>
+    </ul>
+  </div>
+</section>
+<!--底部导航-->
+<%= require('html-loader!./layout/footer.html') %>
+</body>
+</html>

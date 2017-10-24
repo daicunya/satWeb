@@ -33,11 +33,11 @@ var _mockService = {
       error: reject
     })
   },
-  //练习结果接口
-  exerciseResult    : function (resolve,reject) {
+  //练习报告接口
+  exerciseResult    : function (dataList,resolve,reject) {
     _util.request({
-      url: _util.getServerUrl('/cn/wap-api/notes'),
-      data: '',
+      url: _util.getServerUrl('/cn/wap-api/result'),
+      data: dataList,
       success: resolve,
       error: reject
     })
@@ -96,10 +96,53 @@ var _mockService = {
       error: reject
     })
   },
+  //练习、模考、测评中途退出
+  getOut            : function (resolve,reject) {
+    _util.request({
+      url: _util.getServerUrl('/cn/wap-api/leave'),
+      success: resolve,
+      error: reject
+    })
+  },
+  //测评二级页面
+  evalIndex         : function (resolve,reject) {
+    _util.request({
+      url: _util.getServerUrl('/cn/wap-api/evaulation-index'),
+      success: resolve,
+      error: reject
+    })
+  },
   //测评提示页
   evalNotice        : function (dataList,resolve,reject) {
     _util.request({
       url: _util.getServerUrl('/cn/wap-api/evaulation-notice'),
+      data: dataList,
+      success: resolve,
+      error: reject
+    })
+  },
+  //测评详情页第一题
+  evalTest          : function (dataList,resolve,reject) {
+    _util.request({
+      url: _util.getServerUrl('/cn/wap-api/evaulation-test'),
+      data: dataList,
+      success: resolve,
+      error: reject
+    })
+  },
+  //测评下一题
+  evalNext          : function (dataList,resolve,reject) {
+    _util.request({
+      url: _util.getServerUrl('/cn/wap-api/evaulation-next'),
+      data: dataList,
+      success: resolve,
+      error: reject
+    })
+  },
+  //测评报告
+  evalReport        : function (dataList,resolve,reject) {
+    _util.request({
+      url: _util.getServerUrl('/cn/wap-api/evaulation-report'),
       data: dataList,
       success: resolve,
       error: reject

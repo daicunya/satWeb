@@ -26,12 +26,20 @@ var getHtmlConfig = function (name,title) {
 var config = {
   //entry js的入口文件
   entry: {
-    common        : ['./src/page/common/index.js'],
-    index         : ['./src/page/index/index.js'],
-    exercise      : ['./src/page/exercise/index.js'],
-    mock          : ['./src/page/mock/index.js'],
-    mockNote      : ['./src/page/mockNote/index.js'],
-    readDetails   : ['./src/page/readDetails/index.js']
+    'common'            : ['./src/page/common/index.js'],
+    'index'             : ['./src/page/index/index.js'],
+    'user-login'        : ['./src/page/user-login/index.js'],
+    'user-register'     : ['./src/page/user-register/index.js'],
+    'user-pass-reset'   : ['./src/page/user-pass-reset/index.js'],
+    'user-pass-update'  : ['./src/page/user-pass-update/index.js'],
+    'exercise'          : ['./src/page/exercise/index.js'],
+    'mock'              : ['./src/page/mock/index.js'],
+    'mockNote'          : ['./src/page/mockNote/index.js'],
+    'readDetails'       : ['./src/page/readDetails/index.js'],
+    'report'            : ['./src/page/report/index.js'],
+    'evaluation'        : ['./src/page/evaluation/index.js'],
+    'evalDetails'       : ['./src/page/evalDetails/index.js'],
+    'search'            : ['./src/page/search/index.js']
   },
   //output: 目标文件
   output: {
@@ -41,7 +49,7 @@ var config = {
   },
   //externals:外部依赖的声明
   externals: {
-    // 'zepto': 'window.zepto'
+    // 'jquery': 'window.jQuery'
   },
   module: {
     loaders: [
@@ -71,10 +79,18 @@ var config = {
     new ExtractTextPlugin("css/[name].css"),
     //  HTML模板处理
     new HtmlWebpackPlugin(getHtmlConfig('index','首页')),
+    new HtmlWebpackPlugin(getHtmlConfig('user-login','登录')),
+    new HtmlWebpackPlugin(getHtmlConfig('user-register','注册')),
+    new HtmlWebpackPlugin(getHtmlConfig('user-pass-update','修改密码')),
+    new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset','找回密码')),
     new HtmlWebpackPlugin(getHtmlConfig('exercise','练习')),
     new HtmlWebpackPlugin(getHtmlConfig('mock','模考')),
     new HtmlWebpackPlugin(getHtmlConfig('mockNote','模考提示页')),
-    new HtmlWebpackPlugin(getHtmlConfig('readDetails','做题详情页'))
+    new HtmlWebpackPlugin(getHtmlConfig('readDetails','做题详情页')),
+    new HtmlWebpackPlugin(getHtmlConfig('report','报告')),
+    new HtmlWebpackPlugin(getHtmlConfig('evaluation','测评')),
+    new HtmlWebpackPlugin(getHtmlConfig('evalDetails','测评详情页')),
+    new HtmlWebpackPlugin(getHtmlConfig('search','搜索'))
   ]
 };
 if ('dev' === WEBPACK_ENV) {

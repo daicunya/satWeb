@@ -42,7 +42,7 @@ var _exer = {
     var _$this  = $(_this),
         dataList = {
           num   : _$this.data('num'),//小节号
-          tid   : _$this.parent().parent().data('tid'),//试卷id
+          tpId   : _$this.parent().parent().data('tpId'),//试卷id
           major : $('.exer-list .active').data('major')//科目分类
         };
     _topicService.exerciseDetail(dataList,function (res) {

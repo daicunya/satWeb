@@ -31,6 +31,9 @@
       <div class="math-gap">
         <input type="text">
       </div>
+      <div class="textarea-gap">
+        <textarea placeholder="请在此输入……"></textarea>
+      </div>
       <div class="math-panel">
         <table>
           <tr>
@@ -75,20 +78,24 @@
   {{/data}}
   <!--题目底部-->
   <div class="read-footer border-1px">
-    <div class="p-cmn-next read-prev" data-name="up">上一题</div>
-    <div class="read-out"><i class="fa fa-power-off">离开</i></div>
-    <div class="read-time"><i class="fa fa-clock-o">12:00</i></div>
+     {{#upId}}
+       <div class="p-cmn-next read-prev" data-name="up">上一题</div>
+     {{/upId}}
+    <div class="read-out"><i class="fa fa-power-off"></i>离开</div>
+    <div class="read-time"><i class="fa fa-clock-o"></i><span></span></div>
     <div class="p-cnn-next read-next" data-name="next">下一题</div>
+    <div class="p-cnn-next read-submit" data-name="submit" style="display:none">提交</div>
   </div>
   {{#data}}
     {{#section}}
       <input type="hidden" id="j-section" data-sec={{section}}>
     {{/section}}
   {{/data}}
+  <!--用以判断模考是否进入下一小节-->
   {{#nextId}}
-      <input type="hidden" id="j-nextId" data-next={{nextId}}>
-    {{/nextId}}
-    {{^nextId}}
-        <input type="hidden" id="j-nextSection" data-next={{nextSection}}>
-    {{/nextId}}
+     <input type="hidden" id="j-nextId" data-next={{nextId}}>
+  {{/nextId}}
+  {{^nextId}}
+     <input type="hidden" id="j-nextSection" data-next={{nextSection}}>
+  {{/nextId}}
 {{/dataList}}

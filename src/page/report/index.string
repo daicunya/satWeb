@@ -1,0 +1,122 @@
+{{#dataList}}
+  <div class="report-img">
+    <img src="/images/banner/001.jpg" alt="">
+  </div>
+  <ul class="report-correct">
+    {{#que}}
+        <li><i class="fa fa-percent"></i>正确率<span>{{correctRate}}%</span></li>
+    {{/que}}
+    {{^que}}
+        <li><i class="fa fa-percent"></i>正确率<span>{{correctRate}}%</span></li>
+    {{/que}}
+    {{#que}}
+      <li class="report-time"><i class="fa fa-clock-o"></i>做题用时<span>02:03</span></li>
+    {{/que}}
+  </ul>
+  <!--练习-->
+  {{^que}}
+    <div class="report-cmn report-details">
+      <ul>
+      {{#data}}
+        {{#correct}}
+          <li class="report-item correct" data-qid="{{qid}}">{{number}}</li>
+        {{/correct}}
+        {{^correct}}
+          <li class="report-item wrong" data-qid="{{qid}}">{{number}}</li>
+        {{/correct}}
+      {{/data}}
+      </ul>
+    </div>
+  {{/que}}
+  <!--模板-->
+  {{#que}}
+    <div class="report-cmn report-mock">
+      <div class="report-mock-wrap">
+        {{#Vocabulary}}
+        <ul class="report-list">
+          <h2 class="report-head">词汇</h2>
+          {{#data}}
+          {{#correct}}
+          <li class="report-item correct" data-qid="{{qid}}">{{number}}</li>
+          {{/correct}}
+          {{^correct}}
+          <li class="report-item wrong" data-qid="{{qid}}">{{number}}</li>
+          {{/correct}}
+          {{/data}}
+        </ul>
+        {{/Vocabulary}}
+        {{#Reading}}
+          <ul class="report-list">
+            <h2 class="report-head">阅读</h2>
+            {{#data}}
+            {{#correct}}
+              <li class="report-item correct" data-qid="{{qid}}">{{number}}</li>
+            {{/correct}}
+            {{^correct}}
+              <li class="report-item wrong" data-qid="{{qid}}">{{number}}</li>
+            {{/correct}}
+            {{/data}}
+          </ul>
+        {{/Reading}}
+        {{#Translation}}
+        <ul class="report-list">
+          <h2 class="report-head">翻译</h2>
+          {{#data}}
+          {{#correct}}
+          <li class="report-item correct" data-qid="{{qid}}">{{number}}</li>
+          {{/correct}}
+          {{^correct}}
+          <li class="report-item wrong" data-qid="{{qid}}">{{number}}</li>
+          {{/correct}}
+          {{/data}}
+        </ul>
+        {{/Translation}}
+        {{#Writing}}
+          <ul class="report-list">
+            <h2 class="report-head">文法</h2>
+            {{#data}}
+            {{#correct}}
+              <li class="report-item correct" data-qid="{{qid}}">{{number}}</li>
+            {{/correct}}
+            {{^correct}}
+              <li class="report-item wrong" data-qid="{{qid}}">{{number}}</li>
+            {{/correct}}
+            {{/data}}
+          </ul>
+        {{/Writing}}
+        {{#Math1}}
+          <ul class="report-list">
+            <h2 class="report-head">数学1</h2>
+            {{#data}}
+            {{#correct}}
+              <li class="report-item correct" data-qid="{{qid}}">{{number}}</li>
+            {{/correct}}
+            {{^correct}}
+              <li class="report-item wrong" data-qid="{{qid}}">{{number}}</li>
+            {{/correct}}
+            {{/data}}
+          </ul>
+        {{/Math1}}
+        {{#Math2}}
+          <ul class="report-list">
+            <h2 class="report-head">数学2</h2>
+            {{#data}}
+            {{#correct}}
+              <li class="report-item correct" data-qid="{{qid}}">{{number}}</li>
+            {{/correct}}
+            {{^correct}}
+              <li class="report-item wrong" data-qid="{{qid}}">{{number}}</li>
+            {{/correct}}
+            {{/data}}
+          </ul>
+        {{/Math2}}
+      </div>
+    </div>
+  {{/que}}
+  <div class="report-bottom">
+    <a class="report-go-list" href="#">返回列表</a>
+  </div>
+  {{#res}}
+    <input type="hidden" id="j-report-major" data-major={{part}}>
+  {{/res}}
+{{/dataList}}

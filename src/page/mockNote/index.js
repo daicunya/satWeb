@@ -21,20 +21,25 @@ var _mockNote = {
     this.bindEvent();
   },
   onLoad          : function () {
+    //判断模考还是测评
     if (this.type == 'mock') {
       this.mNoteEvent();
     } else {
-      this.evaulationEvent();
+      this.evaluationEvent();
     }
   },
   bindEvent       : function () {
     var _this = this,
         major = this.data.major;
     $('.mock-start').tap(function () {
-      if (major) {
-        window.location.href='./readDetails.html?type=mock&major='+major+'&tpId='+_this.data.tpId
+      if (_this.type == 'mock') {
+        if (major) {
+          window.location.href='./readDetails.html?type=mock&major='+major+'&tpId='+_this.data.tpId
+        }else {
+          window.location.href='./readDetails.html?type=mock&tpId='+_this.data.tpId
+        }
       } else {
-        window.location.href='./readDetails.html?type=mock&tpId='+_this.data.tpId
+        window.location.href='./readDetails.html?type=evaluation&tpId='+_this.data.tpId
       }
     })
   },
@@ -53,17 +58,16 @@ var _mockNote = {
     })
   },
   //测评请求接口
-  evaulationEvent : function () {
+  evaluationEvent : function () {
     var listParam = this.data,
-        noteHtml  = '';
+        rendHtml  = '';
     //删除多余的参数
     this.type ? '' : (delete listParam.major);
     _topicService.evalNotice(listParam,function (res) {
-      console.log(res);
-      noteHtml = _util.renderHtml(templateIndex,{
+      rendHtml = _util.renderHtml(templateIndex,{
         dataList : res
       });
-      $('.m-note-wrap').html(noteHtml);
+      $('.m-note-wrap').html(rendHtml);
     },function (err) {
       console.log(err);
     })

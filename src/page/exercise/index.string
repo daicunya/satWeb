@@ -3,7 +3,7 @@
   <li class="exer-cnt-item">
     <dl class="exer-dl">
       <dt>OG</dt>
-      <!--data-tid  试卷tid-->
+      <!--data-tpId  试卷tpId-->
       {{#OG}}
         <dd>
           <div class="j-inner-div clearfix">
@@ -11,11 +11,11 @@
             <span class="fr"><i class="fa fa-angle-down"></i></span>
           </div>
           <ul class="inner-list">
-            <li><a href='./readdetails.html?type=exercise&major=Reading&num=1&tid={{id}}'>reading01</a></li>
-            <li><a href='./readdetails.html?type=exercise&major=Reading&num=2&tid={{id}}'>reading02</a></li>
-            <li><a href='./readdetails.html?type=exercise&major=Reading&num=3&tid={{id}}'>reading03</a></li>
-            <li><a href='./readdetails.html?type=exercise&major=Reading&num=4&tid={{id}}'>reading04</a></li>
-            <li><a href='./readdetails.html?type=exercise&major=Reading&num=5&tid={{id}}'>reading05</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Reading&num=1&tpId={{tpId}}'>reading01</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Reading&num=2&tpId={{tpId}}'>reading02</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Reading&num=3&tpId={{tpId}}'>reading03</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Reading&num=4&tpId={{tpId}}'>reading04</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Reading&num=5&tpId={{tpId}}'>reading05</a></li>
           </ul>
         </dd>
       {{/OG}}
@@ -29,11 +29,11 @@
               <span class="fr"><i class="fa fa-angle-down"></i></span>
             </div>
             <ul class="inner-list">
-              <li><a href='./readdetails.html?type=exercise&major=Reading&num=1&tid={{id}}'>reading01</a></li>
-              <li><a href='./readdetails.html?type=exercise&major=Reading&num=2&tid={{id}}'>reading02</a></li>
-              <li><a href='./readdetails.html?type=exercise&major=Reading&num=3&tid={{id}}'>reading03</a></li>
-              <li><a href='./readdetails.html?type=exercise&major=Reading&num=4&tid={{id}}'>reading04</a></li>
-              <li><a href='./readdetails.html?type=exercise&major=Reading&num=5&tid={{id}}'>reading05</a></li>
+              <li><a href='./readdetails.html?type=exercise&major=Reading&num=1&tpId={{tpId}}'>reading01</a></li>
+              <li><a href='./readdetails.html?type=exercise&major=Reading&num=2&tpId={{tpId}}'>reading02</a></li>
+              <li><a href='./readdetails.html?type=exercise&major=Reading&num=3&tpId={{tpId}}'>reading03</a></li>
+              <li><a href='./readdetails.html?type=exercise&major=Reading&num=4&tpId={{tpId}}'>reading04</a></li>
+              <li><a href='./readdetails.html?type=exercise&major=Reading&num=5&tpId={{tpId}}'>reading05</a></li>
             </ul>
           </dd>
       {{/princeton}}
@@ -47,11 +47,11 @@
             <span class="fr"><i class="fa fa-angle-down"></i></span>
           </div>
           <ul class="inner-list">
-            <li><a href='./readdetails.html?type=exercise&major=Reading&num=1&tid={{id}}'>reading01</a></li>
-            <li><a href='./readdetails.html?type=exercise&major=Reading&num=2&tid={{id}}'>reading02</a></li>
-            <li><a href='./readdetails.html?type=exercise&major=Reading&num=3&tid={{id}}'>reading03</a></li>
-            <li><a href='./readdetails.html?type=exercise&major=Reading&num=4&tid={{id}}'>reading04</a></li>
-            <li><a href='./readdetails.html?type=exercise&major=Reading&num=5&tid={{id}}'>reading05</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Reading&num=1&tpId={{tpId}}'>reading01</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Reading&num=2&tpId={{tpId}}'>reading02</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Reading&num=3&tpId={{tpId}}'>reading03</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Reading&num=4&tpId={{tpId}}'>reading04</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Reading&num=5&tpId={{tpId}}'>reading05</a></li>
           </ul>
         </dd>
       {{/kaplan}}
@@ -65,11 +65,11 @@
             <span class="fr"><i class="fa fa-angle-down"></i></span>
           </div>
           <ul class="inner-list">
-            <li><a href='./readdetails.html?type=exercise&major=Reading&num=1&tid={{id}}'>reading01</a></li>
-            <li><a href='./readdetails.html?type=exercise&major=Reading&num=2&tid={{id}}'>reading02</a></li>
-            <li><a href='./readdetails.html?type=exercise&major=Reading&num=3&tid={{id}}'>reading03</a></li>
-            <li><a href='./readdetails.html?type=exercise&major=Reading&num=4&tid={{id}}'>reading04</a></li>
-            <li><a href='./readdetails.html?type=exercise&major=Reading&num=5&tid={{id}}'>reading05</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Reading&num=1&tpId={{tpId}}'>reading01</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Reading&num=2&tpId={{tpId}}'>reading02</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Reading&num=3&tpId={{tpId}}'>reading03</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Reading&num=4&tpId={{tpId}}'>reading04</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Reading&num=5&tpId={{tpId}}'>reading05</a></li>
           </ul>
         </dd>
       {{/BARRON}}
@@ -81,7 +81,7 @@
   <li class="exer-cnt-item">
     <dl class="exer-dl">
       <dt>OG</dt>
-      <!--data-tid  试卷tid-->
+      <!--data-tpId  试卷tpId-->
       {{#OG}}
         <dd>
           <div class="j-inner-div clearfix">
@@ -89,10 +89,10 @@
             <span class="fr"><i class="fa fa-angle-down"></i></span>
           </div>
           <ul class="inner-list">
-            <li><a href='./readdetails.html?type=exercise&major=Writing&num=1&tid={{id}}'>writing01</a></li>
-            <li><a href='./readdetails.html?type=exercise&major=Writing&num=2&tid={{id}}'>writing02</a></li>
-            <li><a href='./readdetails.html?type=exercise&major=Writing&num=3&tid={{id}}'>writing03</a></li>
-            <li><a href='./readdetails.html?type=exercise&major=Writing&num=4&tid={{id}}'>writing04</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Writing&num=1&tpId={{tpId}}'>writing01</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Writing&num=2&tpId={{tpId}}'>writing02</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Writing&num=3&tpId={{tpId}}'>writing03</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Writing&num=4&tpId={{tpId}}'>writing04</a></li>
           </ul>
         </dd>
       {{/OG}}
@@ -100,16 +100,16 @@
     <dl class="exer-dl">
       <dt>普林斯顿</dt>
       {{#princeton}}
-          <dd data-tid={{id}}>
+          <dd data-tpId={{tpId}}>
             <div class="j-inner-div clearfix">
               <span class="fl">{{name}}</span>
               <span class="fr"><i class="fa fa-angle-down"></i></span>
             </div>
             <ul class="inner-list">
-              <li><a href='./readdetails.html?type=exercise&major=Writing&num=1&tid={{id}}'>writing01</a></li>
-              <li><a href='./readdetails.html?type=exercise&major=Writing&num=2&tid={{id}}'>writing02</a></li>
-              <li><a href='./readdetails.html?type=exercise&major=Writing&num=3&tid={{id}}'>writing03</a></li>
-              <li><a href='./readdetails.html?type=exercise&major=Writing&num=4&tid={{id}}'>writing04</a></li>
+              <li><a href='./readdetails.html?type=exercise&major=Writing&num=1&tpId={{tpId}}'>writing01</a></li>
+              <li><a href='./readdetails.html?type=exercise&major=Writing&num=2&tpId={{tpId}}'>writing02</a></li>
+              <li><a href='./readdetails.html?type=exercise&major=Writing&num=3&tpId={{tpId}}'>writing03</a></li>
+              <li><a href='./readdetails.html?type=exercise&major=Writing&num=4&tpId={{tpId}}'>writing04</a></li>
             </ul>
           </dd>
       {{/princeton}}
@@ -117,16 +117,16 @@
     <dl class="exer-dl">
       <dt>开普兰</dt>
       {{#kaplan}}
-        <dd data-tid={{id}}>
+        <dd data-tpId={{tpId}}>
           <div class="j-inner-div clearfix">
             <span class="fl">{{name}}</span>
             <span class="fr"><i class="fa fa-angle-down"></i></span>
           </div>
           <ul class="inner-list">
-            <li><a href='./readdetails.html?type=exercise&major=Writing&num=1&tid={{id}}'>writing01</a></li>
-            <li><a href='./readdetails.html?type=exercise&major=Writing&num=2&tid={{id}}'>writing02</a></li>
-            <li><a href='./readdetails.html?type=exercise&major=Writing&num=3&tid={{id}}'>writing03</a></li>
-            <li><a href='./readdetails.html?type=exercise&major=Writing&num=4&tid={{id}}'>writing04</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Writing&num=1&tpId={{tpId}}'>writing01</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Writing&num=2&tpId={{tpId}}'>writing02</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Writing&num=3&tpId={{tpId}}'>writing03</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Writing&num=4&tpId={{tpId}}'>writing04</a></li>
           </ul>
         </dd>
       {{/kaplan}}
@@ -134,16 +134,16 @@
     <dl class="exer-dl">
       <dt>BARRON</dt>
       {{#BARRON}}
-        <dd data-tid={{id}}>
+        <dd data-tpId={{tpId}}>
           <div class="j-inner-div clearfix">
             <span class="fl">{{name}}</span>
             <span class="fr"><i class="fa fa-angle-down"></i></span>
           </div>
           <ul class="inner-list">
-            <li><a href='./readdetails.html?type=exercise&major=Writing&num=1&tid={{id}}'>writing01</a></li>
-            <li><a href='./readdetails.html?type=exercise&major=Writing&num=2&tid={{id}}'>writing02</a></li>
-            <li><a href='./readdetails.html?type=exercise&major=Writing&num=3&tid={{id}}'>writing03</a></li>
-            <li><a href='./readdetails.html?type=exercise&major=Writing&num=4&tid={{id}}'>writing04</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Writing&num=1&tpId={{tpId}}'>writing01</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Writing&num=2&tpId={{tpId}}'>writing02</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Writing&num=3&tpId={{tpId}}'>writing03</a></li>
+            <li><a href='./readdetails.html?type=exercise&major=Writing&num=4&tpId={{tpId}}'>writing04</a></li>
           </ul>
         </dd>
       {{/BARRON}}
@@ -155,16 +155,16 @@
 <li class="exer-cnt-item">
   <dl class="exer-dl">
     <dt>OG</dt>
-    <!--data-tid  试卷tid-->
+    <!--data-tpId  试卷tpId-->
     {{#OG}}
-    <dd data-tid={{id}}>
+    <dd data-tpId={{tpId}}>
       <div class="j-inner-div clearfix">
         <span class="fl">{{name}}</span>
         <span class="fr"><i class="fa fa-angle-down"></i></span>
       </div>
       <ul class="inner-list">
-        <li><a href='./readdetails.html?type=exercise&major=Math1&tid={{id}}'>No Calculator</a></li>
-        <li><a href='./readdetails.html?type=exercise&major=Math2&tid={{id}}'>Calculator</a></li>
+        <li><a href='./readdetails.html?type=exercise&major=Math1&tpId={{tpId}}'>No Calculator</a></li>
+        <li><a href='./readdetails.html?type=exercise&major=Math2&tpId={{tpId}}'>Calculator</a></li>
       </ul>
     </dd>
     {{/OG}}
@@ -172,14 +172,14 @@
   <dl class="exer-dl">
     <dt>普林斯顿</dt>
     {{#princeton}}
-    <dd data-tid={{id}}>
+    <dd data-tpId={{tpId}}>
       <div class="j-inner-div clearfix">
         <span class="fl">{{name}}</span>
         <span class="fr"><i class="fa fa-angle-down"></i></span>
       </div>
       <ul class="inner-list">
-        <li><a href='./readdetails.html?type=exercise&major=Math1&tid={{id}}'>No Calculator</a></li>
-        <li><a href='./readdetails.html?type=exercise&major=Math2&tid={{id}}'>Calculator</a></li>
+        <li><a href='./readdetails.html?type=exercise&major=Math1&tpId={{tpId}}'>No Calculator</a></li>
+        <li><a href='./readdetails.html?type=exercise&major=Math2&tpId={{tpId}}'>Calculator</a></li>
       </ul>
     </dd>
     {{/princeton}}
@@ -187,14 +187,14 @@
   <dl class="exer-dl">
     <dt>开普兰</dt>
     {{#kaplan}}
-    <dd data-tid={{id}}>
+    <dd data-tpId={{tpId}}>
       <div class="j-inner-div clearfix">
         <span class="fl">{{name}}</span>
         <span class="fr"><i class="fa fa-angle-down"></i></span>
       </div>
       <ul class="inner-list">
-        <li><a href='./readdetails.html?type=exercise&major=Math1&tid={{id}}'>No Calculator</a></li>
-        <li><a href='./readdetails.html?type=exercise&major=Math2&tid={{id}}'>Calculator</a></li>
+        <li><a href='./readdetails.html?type=exercise&major=Math1&tpId={{tpId}}'>No Calculator</a></li>
+        <li><a href='./readdetails.html?type=exercise&major=Math2&tpId={{tpId}}'>Calculator</a></li>
       </ul>
     </dd>
     {{/kaplan}}
@@ -202,14 +202,14 @@
   <dl class="exer-dl">
     <dt>BARRON</dt>
     {{#BARRON}}
-    <dd data-tid={{id}}>
+    <dd data-tpId={{tpId}}>
       <div class="j-inner-div clearfix">
         <span class="fl">{{name}}</span>
         <span class="fr"><i class="fa fa-angle-down"></i></span>
       </div>
       <ul class="inner-list">
-        <li><a href='./readdetails.html?type=exercise&major=Math1&tid={{id}}'>No Calculator</a></li>
-        <li><a href='./readdetails.html?type=exercise&major=Math2&tid={{id}}'>Calculator</a></li>
+        <li><a href='./readdetails.html?type=exercise&major=Math1&tpId={{tpId}}'>No Calculator</a></li>
+        <li><a href='./readdetails.html?type=exercise&major=Math2&tpId={{tpId}}'>Calculator</a></li>
       </ul>
     </dd>
     {{/BARRON}}
