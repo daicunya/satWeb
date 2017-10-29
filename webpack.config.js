@@ -31,7 +31,7 @@ var config = {
     'user-login'        : ['./src/page/user-login/index.js'],
     'user-register'     : ['./src/page/user-register/index.js'],
     'user-pass-reset'   : ['./src/page/user-pass-reset/index.js'],
-    'user-pass-update'  : ['./src/page/user-pass-update/index.js'],
+    'result'            : ['./src/page/result/index.js'],
     'exercise'          : ['./src/page/exercise/index.js'],
     'mock'              : ['./src/page/mock/index.js'],
     'mockNote'          : ['./src/page/mockNote/index.js'],
@@ -39,7 +39,12 @@ var config = {
     'report'            : ['./src/page/report/index.js'],
     'evaluation'        : ['./src/page/evaluation/index.js'],
     'evalDetails'       : ['./src/page/evalDetails/index.js'],
-    'search'            : ['./src/page/search/index.js']
+    'search'            : ['./src/page/search/index.js'],
+    'user-center'       : ['./src/page/user-center/index.js'],
+    'user-mock'         : ['./src/page/user-mock/index.js'],
+    'user-exercise'     : ['./src/page/user-exercise/index.js'],
+    'user-eval'         : ['./src/page/user-eval/index.js'],
+    'user-collect'      : ['./src/page/user-collect/index.js']
   },
   //output: 目标文件
   output: {
@@ -81,7 +86,7 @@ var config = {
     new HtmlWebpackPlugin(getHtmlConfig('index','首页')),
     new HtmlWebpackPlugin(getHtmlConfig('user-login','登录')),
     new HtmlWebpackPlugin(getHtmlConfig('user-register','注册')),
-    new HtmlWebpackPlugin(getHtmlConfig('user-pass-update','修改密码')),
+    new HtmlWebpackPlugin(getHtmlConfig('result','操作结果')),
     new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset','找回密码')),
     new HtmlWebpackPlugin(getHtmlConfig('exercise','练习')),
     new HtmlWebpackPlugin(getHtmlConfig('mock','模考')),
@@ -90,7 +95,12 @@ var config = {
     new HtmlWebpackPlugin(getHtmlConfig('report','报告')),
     new HtmlWebpackPlugin(getHtmlConfig('evaluation','测评')),
     new HtmlWebpackPlugin(getHtmlConfig('evalDetails','测评详情页')),
-    new HtmlWebpackPlugin(getHtmlConfig('search','搜索'))
+    new HtmlWebpackPlugin(getHtmlConfig('search','搜索')),
+    new HtmlWebpackPlugin(getHtmlConfig('user-center','个人中心')),
+    new HtmlWebpackPlugin(getHtmlConfig('user-mock','模考记录')),
+    new HtmlWebpackPlugin(getHtmlConfig('user-exercise','练习记录')),
+    new HtmlWebpackPlugin(getHtmlConfig('user-eval','测评记录')),
+    new HtmlWebpackPlugin(getHtmlConfig('user-collect','收藏记录'))
   ]
 };
 if ('dev' === WEBPACK_ENV) {

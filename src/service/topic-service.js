@@ -88,10 +88,12 @@ var _mockService = {
     })
   },
   //模考报告接口
-  mockReport        : function (dataList,resolve,reject) {
+  mockReport        : function (data,resolve,reject) {
     _util.request({
       url: _util.getServerUrl('/cn/wap-api/mock-report'),
-      data: dataList,
+      data: {
+        id: data
+      },
       success: resolve,
       error: reject
     })
@@ -143,6 +145,15 @@ var _mockService = {
   evalReport        : function (dataList,resolve,reject) {
     _util.request({
       url: _util.getServerUrl('/cn/wap-api/evaulation-report'),
+      data: dataList,
+      success: resolve,
+      error: reject
+    })
+  },
+  //题目收藏
+  collection        : function (dataList,resolve,reject) {
+    _util.request({
+      url: _util.getServerUrl('/cn/wap-api/collection'),
       data: dataList,
       success: resolve,
       error: reject

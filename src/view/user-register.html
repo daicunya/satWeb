@@ -13,41 +13,42 @@
     <div class="in-box">
       <div class="reg-info">
         <ul>
+          <p class="wrong-msg">错误信息!</p>
           <li>
             <i class="fa fa-user-circle"></i>
-            <input type="text" placeholder="请输入用户名"  datatype="/^(?=.*\d)(?=.*[a-z])[a-zA-Z\d]{6,8}$/" errormsg="用户名必须是数字和字母组成，长度在6-8之间!" id="username"/>
-            <span class="validform-checktip validform-wrong">请填写信息！</span>
+            <input type="text" placeholder="请输入用户名"  nullmsg="请输入用户名" id="username"/>
+            <span class="validform-checktip">请填写信息！</span>
           </li>
           <li>
             <div class="input-phone">
               <i class="fa fa-phone"></i>
-              <input type="text" placeholder="请输入你的手机号" datatype="m" errormsg="手机号格式不正确!" id="phone"/>
-              <span class="validform-checktip validform-wrong">请填写信息！</span>
+              <input type="phone" placeholder="请输入你的手机号" name="phone" nullmsg="请输入手机号" id="phone"/>
+              <span class="validform-checktip">请填写信息！</span>
             </div>
             <div class="input-code-btn">
-              <input type="button" value="验证码" />
+              <input type="button" id="codeBtn" value="验证码" />
             </div>
           </li>
           <li>
             <i class="fa fa-code"></i>
-            <input type="text" placeholder="请输入你的验证码" datatype="*" errormsg="验证码不能为空！" id="code_yz"/>
-            <span class="validform-checktip validform-wrong">请填写信息！</span>
+            <input type="text" placeholder="请输入你的验证码" nullmsg="验证码不能为空！" id="enterCode"/>
+            <span class="validform-checktip">请填写信息！</span>
           </li>
           <li>
             <i class="fa fa-lock"></i>
-            <input type="password" placeholder="请输入密码(支持数字和大小写字母)" name="userpassword" class="inputxt" datatype="*6-16" nullmsg="请填写密码！" errormsg="密码范围在6~16位之间！" id="password"/>
-            <span class="validform-checktip validform-wrong">请填写信息！</span>
+            <input type="password" placeholder="请输入密码(支持数字和大小写字母)" nullmsg="请填写密码！" name="pass" id="password"/>
+            <span class="validform-checktip">请填写信息！</span>
           </li>
           <li>
             <i class="fa fa-lock"></i>
-            <input type="password" placeholder="请确认你的密码" name="userpassword2" class="inputxt Validform_error" datatype="*6-16" recheck="userpassword" nullmsg="请确认密码！" id="repass"/>
-            <span class="validform-checktip validform-wrong">请填写信息！</span>
+            <input type="password" placeholder="请确认你的密码" nullmsg="请确认密码!" name="confirmPass" id="confirmPass"/>
+            <span class="validform-checktip">请填写信息！</span>
           </li>
         </ul>
       </div>
       <div class="reg-btn">
-        <input type="button" value="注册" id="regBtn" />
-        <p>已经有了账号？ <a href="./user-login.html">登陆</a></p>
+        <input type="button" value="注册" id="registerBtn" />
+        <p>已经有了账号？ <a href="./user-login.html">登录</a></p>
       </div>
     </div>
   </div>

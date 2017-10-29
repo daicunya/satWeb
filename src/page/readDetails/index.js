@@ -245,13 +245,15 @@ var _mockDetail = {
         qid       = this.data.qid,
         _$readUl  = $('.read-ul');
     //查看做题详情与练习第一题
-    if (qid) {
-      var listParam = {
-        qid : qid
-      }
-    } else {
-      var listParam = this.data.listParam;
-    }
+    // if (qid) {
+    //   var listParam = {
+    //     qid : qid
+    //   }
+    // } else {
+    //   var listParam = this.data.listParam;
+    // }
+    var listParam  =this.data.listParam;
+    qid ? (listParam.qid = qid) : listParam;
     _topicService.exerciseDetail(listParam,function (res) {
       console.log(res);
       readHtml = _util.renderHtml(templateIndex,{

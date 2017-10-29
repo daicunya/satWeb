@@ -13,7 +13,8 @@ var templateReport    = require('./index.string');
 var _report = {
   data: {
     w : window.outerWidth,
-    type : _util.getUrlParam('type') || ''
+    type : _util.getUrlParam('type') || '',
+    id   : _util.getUrlParam('id') || ''
   },
   init: function () {
     this.onLoad();
@@ -78,8 +79,8 @@ var _report = {
   //模考报告
   mockReportEvent: function () {
     var rendHtml = '',
-        _this    = this
-    _topicService.mockReport('',function (res) {
+        _this    = this;
+    _topicService.mockReport(_this.data.id,function (res) {
       console.log(res);
       rendHtml = _util.renderHtml(templateReport,{
         dataList  : res

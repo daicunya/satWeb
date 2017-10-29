@@ -5,6 +5,7 @@
 
 require('./index.styl');
 // var $ = require('util/js/zepto.min.js');
+var _util = require('util/util.js');
 
 var _footer = {
   data: {
@@ -25,6 +26,13 @@ var _footer = {
     _this.data.WIN.scroll(function () {
       _this.data.footer_nav.hide();
     });
+    $('#myLogin').tap(function () {
+      if (sessionStorage.getItem('userSuccessCode')) {
+        window.location.href='./user-center.html';
+      } else {
+        _util.doLogin();
+      }
+    })
   },
   articleEvent: function () {
     var _this = this;

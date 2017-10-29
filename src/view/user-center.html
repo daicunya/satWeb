@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%= require('html-loader!./layout/head-cmn.html')%>
+  <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+<!--头部导航-->
+<%= require('html-loader!./layout/header.html')%>
+<!--内容区-->
+<section class="user-center">
+  <div class="wrap">
+    <ul class="user-list">
+      <li class="user-item">
+        <a href="./user-mock.html" class="user-wrap">
+          <i class="fa fa-file-powerpoint-o icon-left"></i>模考记录<i class="fa fa-angle-right icon-right"></i>
+        </a>
+      </li>
+      <li class="user-item">
+        <a href="./user-exercise.html" class="user-wrap">
+          <i class="fa fa-pencil-square-o icon-left"></i>练习记录<i class="fa fa-angle-right icon-right"></i>
+        </a>
+      </li>
+      <li class="user-item">
+        <a href="./user-eval.html" class="user-wrap">
+          <i class="fa fa-file-text-o icon-left"></i>测评记录<i class="fa fa-angle-right icon-right"></i>
+        </a>
+      </li>
+      <li class="user-item">
+        <a href="./user-collect.html" class="user-wrap">
+          <i class="fa fa-object-group icon-left"></i>收藏题目<i class="fa fa-angle-right icon-right"></i>
+        </a>
+      </li>
+      <li class="user-item">
+        <div class="user-wrap login-out">
+          <i class="fa fa-outdent icon-left"></i>退出
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+<!--底部导航-->
+<%= require('html-loader!./layout/footer.html') %>
+</body>
+</html>

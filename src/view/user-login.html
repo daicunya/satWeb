@@ -13,18 +13,19 @@
     <div class="inBox">
       <h2>雷哥SAT登录</h2>
       <ul>
+        <p class="wrong-msg">错误信息!</p>
         <li>
           <i class="fa fa-user-circle"></i>
-          <input type="text" placeholder="请输入手机号/用户名" datatype="s5-16" errormsg="昵称至少5个字符,最多16个字符！" id="username"/>
-          <span class="validform-checktip validform-wrong">请填写信息！</span>
+          <input type="text" placeholder="请输入手机号/用户名" datatype="s5-16" errormsg="昵称至少5个字符,最多16个字符！" nullmsg="请输入用户名" id="username"/>
+          <span class="validform-checktip">请填写信息！</span>
         </li>
         <li>
           <i class="fa fa-lock"></i>
-          <input type="password" placeholder="请输入密码" datatype="*6-16" errormsg="密码范围在6~16位之间！" id="password"/>
-          <span class="validform-checktip validform-wrong">请填写信息！</span>
+          <input type="password" placeholder="请输入密码" datatype="*6-16" errormsg="密码范围在6~16位之间！" nullmsg="请输入密码" id="password"/>
+          <span class="validform-checktip">请填写信息！</span>
         </li>
         <li>
-          <input type="button" value="登陆" id="sub_b" onclick="subLogin('#username','#password')"/>
+          <input type="button" value="登录" id="logBtn"/>
         </li>
       </ul>
       <div class="other-in">

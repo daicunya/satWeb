@@ -1,0 +1,50 @@
+{{#dataList}}
+{{#data}}
+  <li class="user-list">
+    {{#all}}
+      <dl>
+      {{#data}}
+        <dd class="user-item">
+          <div class="user-text">
+            <h3>{{name}}-{{time}}</h3>
+            <p><i class="fa fa-clock-o"></i>{{date}} {{rtime}}</p>
+          </div>
+          <a class="user-report" data-id={{id}} href="#">查看报告</a>
+          <input type="button" value="删除" data-id={{id}} class="user-delete">
+        </dd>
+      {{/data}}
+      </dl>
+      <ul class="p-page">
+        <li class="p-first" data-num="1">首页</li>
+        <li class="p-prev" data-num="1">上一页</li>
+        <li class="p-pos">1/{{allPage}}</li>
+        <li class="p-next" data-num="2">下一页</li>
+        <li class="p-end" data-num="3">末页</li>
+      </ul>
+    {{/all}}
+  </li>
+  <li class="user-list">
+    {{#single}}
+    <dl>
+      {{#data}}
+        <dd class="user-item">
+          <div class="user-text">
+            <h3>{{name}}-{{time}}-{{part}}</h3>
+            <p><i class="fa fa-clock-o"></i>{{date}} {{rtime}}</p>
+          </div>
+          <a class="user-report" data-id={{id}} href="#">查看报告</a>
+          <input type="button" value="删除" data-id={{id}} class="user-delete">
+        </dd>
+      {{/data}}
+    </dl>
+    <ul class="p-page">
+      <li class="p-first" data-num="1">首页</li>
+      <li class="p-prev" data-num="1">上一页</li>
+      <li class="p-pos">1/{{singlePage}}</li>
+      <li class="p-next" data-num="2">下一页</li>
+      <li class="p-end" data-num="3">末页</li>
+    </ul>
+    {{/single}}
+  </li>
+{{/data}}
+{{/dataList}}
