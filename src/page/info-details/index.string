@@ -1,0 +1,28 @@
+{{#dataList}}
+  <div class="info-img">
+    <img src={{pic}} alt="图片">
+    <p class="clearfix">
+      <span class="fl"><i class="fa fa-clock-o"></i>{{publishTime}}</span>
+      <span class="fr"><i class="fa fa-commenting-o"></i>{{hits}}</span>
+    </p>
+  </div>
+  <h1>{{title}}</h1>
+  <div class="info-abstract">
+    <em>摘要: </em>{{summary}}
+  </div>
+  <div class="info-article">
+    {{{content}}}
+  </div>
+  <!--推荐阅读-->
+  <div class="info-extend">
+    <div class="info-cate border-1px">
+      <p>推荐阅读</p>
+      <a href="./information.html">查看更多<i class="fa fa-angle-double-right"></i></a>
+    </div>
+    <ul class="info-extend-list">
+      {{#recommend}}
+        <li class="info-extend-item"><a href=./info-details.html?id={{id}}>{{title}}</a></li>
+      {{/recommend}}
+    </ul>
+  </div>
+{{/dataList}}

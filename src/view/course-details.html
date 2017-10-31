@@ -5,16 +5,12 @@
   <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
-<!--头部导航-->
 <%= require('html-loader!./layout/header.html')%>
-<!--内容区-->
-<section class="user-center">
-  <ul class="p-tag-list user-nav border-1px">
-    <li class="active">阅读</li>
-    <li>文法</li>
-    <li>数学</li>
-  </ul>
-  <ul class="p-tag-cnt user-wrap"></ul>
+<section>
+  <div class="p-shade"></div>
+  <div class="course-details">
+
+  </div>
 </section>
 <!--底部导航-->
 <%= require('html-loader!./layout/footer.html') %>

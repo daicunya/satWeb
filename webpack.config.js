@@ -44,7 +44,11 @@ var config = {
     'user-mock'         : ['./src/page/user-mock/index.js'],
     'user-exercise'     : ['./src/page/user-exercise/index.js'],
     'user-eval'         : ['./src/page/user-eval/index.js'],
-    'user-collect'      : ['./src/page/user-collect/index.js']
+    'user-collect'      : ['./src/page/user-collect/index.js'],
+    'information'       : ['./src/page/information/index.js'],
+    'info-details'      : ['./src/page/info-details/index.js'],
+    'course'            : ['./src/page/course/index.js'],
+    'course-details'    : ['./src/page/course-details/index.js']
   },
   //output: 目标文件
   output: {
@@ -100,7 +104,11 @@ var config = {
     new HtmlWebpackPlugin(getHtmlConfig('user-mock','模考记录')),
     new HtmlWebpackPlugin(getHtmlConfig('user-exercise','练习记录')),
     new HtmlWebpackPlugin(getHtmlConfig('user-eval','测评记录')),
-    new HtmlWebpackPlugin(getHtmlConfig('user-collect','收藏记录'))
+    new HtmlWebpackPlugin(getHtmlConfig('user-collect','收藏记录')),
+    new HtmlWebpackPlugin(getHtmlConfig('information','资讯')),
+    new HtmlWebpackPlugin(getHtmlConfig('info-details','资讯详情')),
+    new HtmlWebpackPlugin(getHtmlConfig('course','课程')),
+    new HtmlWebpackPlugin(getHtmlConfig('course-details','课程详情'))
   ]
 };
 if ('dev' === WEBPACK_ENV) {

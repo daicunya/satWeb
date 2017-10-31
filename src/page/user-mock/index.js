@@ -38,7 +38,7 @@ var _userMock = {
     //上下翻页
     $('.user-wrap').on('tap','.p-next',function () {
       var listParam = {
-        p: $(this).data('num'),
+        p     : $(this).data('num'),
         major : $('.user-nav .active').data('major')
       };
       _userService.userMock(listParam,function (res) {

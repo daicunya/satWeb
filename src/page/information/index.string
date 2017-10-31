@@ -1,0 +1,74 @@
+{{#dataList}}
+  <!--新闻资讯-->
+  <li class="p-info-list">
+    <ul>
+      {{#news}}
+      <li class="p-info-item">
+        <a href=./info-details.html?id={{id}} data-id={{id}}>
+          <div class="p-info-img">
+            <img src={{pic}} alt="">
+          </div>
+          <div href="#" class="p-info-text">
+            <h2>{{title}}</h2>
+            <blockquote class="p-ic-wrap clearfix">
+              <i class="fl">{{publishTime}}</i>
+              <em class="fr">
+                {{hits}}
+                <i class="fa fa-commenting-o"></i>
+              </em>
+            </blockquote>
+          </div>
+        </a>
+      </li>
+      {{/news}}
+    </ul>
+  </li>
+  <!--学术报告-->
+  <li class="p-info-list">
+    <ul>
+      {{#report}}
+      <li class="p-info-item">
+        <a href=./info-details.html?id={{id}} data-id={{id}}>
+          <div class="p-info-img">
+            <img src={{pic}} alt="">
+          </div>
+          <div href="#" class="p-info-text">
+            <h2>{{title}}</h2>
+            <blockquote class="p-ic-wrap clearfix">
+              <i class="fl">{{publishTime}}</i>
+              <em class="fr">
+                {{hits}}
+                <i class="fa fa-commenting-o"></i>
+              </em>
+            </blockquote>
+          </div>
+        </a>
+      </li>
+      {{/report}}
+    </ul>
+  </li>
+  <!--高分经验-->
+  <li class="p-info-list">
+    <ul>
+      {{#experience}}
+      <li class="p-info-item">
+        <a href=./info-details.html?id={{id}} data-id={{id}}>
+          <div class="p-info-img">
+            <img src={{pic}} alt="">
+          </div>
+          <div href="#" class="p-info-text">
+            <h2>{{title}}</h2>
+            <blockquote class="p-ic-wrap clearfix">
+              <i class="fl">{{publishTime}}</i>
+              <em class="fr">
+                {{hits}}
+                <i class="fa fa-commenting-o"></i>
+              </em>
+            </blockquote>
+          </div>
+        </a>
+      </li>
+      {{/experience}}
+    </ul>
+  </li>
+{{/dataList}}

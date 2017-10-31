@@ -20,11 +20,11 @@ var _footer = {
     // $('.article-action-mid').click(function () {
     //   _this.articleEvent();
     // });
-    $('section').click(function (e) {
-      _this.articleEvent();
+    $('section').tap(function (e) {
+      // _this.articleEvent();
     });
     _this.data.WIN.scroll(function () {
-      _this.data.footer_nav.hide();
+      // _this.data.footer_nav.hide();
     });
     $('#myLogin').tap(function () {
       if (sessionStorage.getItem('userSuccessCode')) {

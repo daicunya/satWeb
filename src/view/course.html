@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%= require('html-loader!./layout/head-cmn.html')%>
+  <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+<%= require('html-loader!./layout/header.html')%>
+<section>
+  <div class="p-shade"></div>
+  <div class="course">
+    <ul class="course-list">
+      <li class="course-item">
+        <a href="#">
+          <div class="course-img">
+            <img src="" alt="课程图片">
+          </div>
+          <div class="course-text">
+            <h2>VIP精品班VIP精品班VIP精品班VIP精品班VIP精品班</h2>
+            <p><span>课程时长:</span>120h</p>
+            <p><span>开班时间:</span>随时开班</p>
+          </div>
+        </a>
+      </li>
+      <li class="course-item">
+        <a href="#">
+          <div class="course-img">
+            <img src="" alt="课程图片">
+          </div>
+          <div class="course-text">
+            <h2>VIP精品班VIP精品班VIP精品班VIP精品班VIP精品班</h2>
+            <p><span>课程时长:</span>120h</p>
+            <p><span>开班时间:</span>随时开班</p>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+<!--底部导航-->
+<%= require('html-loader!./layout/footer.html') %>
+</body>
+</html>
