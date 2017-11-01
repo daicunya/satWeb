@@ -5,6 +5,7 @@
   position: relative
   .course-list
     .course-item
+      position: relative
       margin-bottom: 1rem;
       padding: .5rem
       background-color: #f5f5f5
@@ -22,6 +23,7 @@
         .course-text
           flex: 1
           h2
+            height: 3.7rem
             margin-bottom: 1.2rem
             line-height: 2rem
             font-size: 1.6rem
@@ -37,3 +39,11 @@
             overflow: hidden
             white-space: nowrap
             text-overflow: ellipsis
+            &.details
+              position: absolute
+              left: 14rem
+              bottom:.5rem
+              width: 7rem
+              text-align: center
+              border-radius(5px)
+              color: #fff

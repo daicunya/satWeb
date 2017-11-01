@@ -48,7 +48,11 @@ var config = {
     'information'       : ['./src/page/information/index.js'],
     'info-details'      : ['./src/page/info-details/index.js'],
     'course'            : ['./src/page/course/index.js'],
-    'course-details'    : ['./src/page/course-details/index.js']
+    'course-details'    : ['./src/page/course-details/index.js'],
+    'pubClass'          : ['./src/page/pubClass/index.js'],
+    'pubDetails'        : ['./src/page/pubDetails/index.js'],
+    'teacher'           : ['./src/page/teacher/index.js'],
+    'teacher-details'   : ['./src/page/teacher-details/index.js']
   },
   //output: 目标文件
   output: {
@@ -108,7 +112,11 @@ var config = {
     new HtmlWebpackPlugin(getHtmlConfig('information','资讯')),
     new HtmlWebpackPlugin(getHtmlConfig('info-details','资讯详情')),
     new HtmlWebpackPlugin(getHtmlConfig('course','课程')),
-    new HtmlWebpackPlugin(getHtmlConfig('course-details','课程详情'))
+    new HtmlWebpackPlugin(getHtmlConfig('course-details','课程详情')),
+    new HtmlWebpackPlugin(getHtmlConfig('pubClass','公开课')),
+    new HtmlWebpackPlugin(getHtmlConfig('pubDetails','公开课详情')),
+    new HtmlWebpackPlugin(getHtmlConfig('teacher','名师团队')),
+    new HtmlWebpackPlugin(getHtmlConfig('teacher-details','名师详情'))
   ]
 };
 if ('dev' === WEBPACK_ENV) {

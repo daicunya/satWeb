@@ -1,0 +1,25 @@
+{{#dataList}}
+  <div class="int-div introduce">
+    <h2>{{cate}}</h2>
+    <div class="int-cnt">{{{introduction}}}</div>
+    <ul class="course-list">
+      <li>
+        <p>课程时长:</p>
+        <div>{{duration}}</div>
+      </li>
+      <li>
+        <p>课程对象:</p>
+        <div>{{{student}}}</div>
+      </li>
+    </ul>
+  </div>
+  <div class="int-div time">
+    <h2>开班时间</h2>
+    <div>{{classTime}}</div>
+  </div>
+  <div class="int-div feature">
+    <h2>课程特色</h2>
+    <div>{{{plan}}}</div>
+  </div>
+  <a class="appointment bColor" href="#">立即预约</a>
+{{/dataList}}

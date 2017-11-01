@@ -1,0 +1,33 @@
+{{#dataList}}
+{{#data}}
+  <div class="wrap">
+    <div class="wrap-cnt">
+      <div class="img">
+        <img src="{{pic}} alt="图片">
+      </div>
+      <div class="name">
+        <h3 class="border-1px">{{name}}</h3>
+        <p><span>主讲:</span>{{subject}}</p>
+      </div>
+    </div>
+    <div class="text">{{introduction}}</div>
+  </div>
+{{/data}}
+  <a class="appointment bColor" href="#">预约名师</a>
+  <!--推荐课程-->
+  <h2 class="course-title">推荐课程</h2>
+  <ul class="course clearfix">
+  <li class="course-list">
+    <div class="course-img">
+      <img src="" alt="图片">
+    </div>
+    <p>VIP精品班</p>
+  </li>
+  <li class="course-list">
+    <div class="course-img">
+      <img src="" alt="图片">
+    </div>
+    <p>VIP精品班</p>
+  </li>
+</ul>
+{{/dataList}}
