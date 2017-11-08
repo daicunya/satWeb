@@ -1,0 +1,14 @@
+{{#dataList}}
+<ul>
+  {{#data}}
+  <li class="search-item">
+    <a href=./readdetails.html?type=exercise&major={{major}}&qid={{qid}}>
+      <h2>{{name}}-{{time}}-{{major}}-{{number}}</h2>
+      <div class="search-cnt">{{{content}}}</div>
+    </a>
+  </li>
+  {{/data}}
+</ul>
+<div class="p-info-more" data-p={{Current}} data-all={{Page}}>浏览更多</div>
+<p class="p-info-bottom">我是有底线的</p>
+{{/dataList}}

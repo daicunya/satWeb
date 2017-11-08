@@ -13,21 +13,6 @@
     <div class="text">{{introduction}}</div>
   </div>
 {{/data}}
-  <a class="appointment bColor" href="#">预约名师</a>
-  <!--推荐课程-->
-  <h2 class="course-title">推荐课程</h2>
-  <ul class="course clearfix">
-  <li class="course-list">
-    <div class="course-img">
-      <img src="" alt="图片">
-    </div>
-    <p>VIP精品班</p>
-  </li>
-  <li class="course-list">
-    <div class="course-img">
-      <img src="" alt="图片">
-    </div>
-    <p>VIP精品班</p>
-  </li>
-</ul>
+<a class="appointment bColor" target="blank" href="mqqwpa://im/chat?chat_type=wpa&uin=2992826058&version=1&src_type=web&web_src=http://m.haishiit.com/">预约名师</a>
 {{/dataList}}
+

@@ -12,7 +12,7 @@ var templateReport    = require('./index.string');
 
 var _report = {
   data: {
-    w : window.outerWidth,
+    w    : window.outerWidth,
     type : _util.getUrlParam('type') || '',
     id   : _util.getUrlParam('id') || ''
   },
@@ -66,7 +66,6 @@ var _report = {
   exerciseReport: function () {
     var rendHtml = '';
     _topicService.exerciseResult('',function (res) {
-      console.log(res);
       rendHtml = _util.renderHtml(templateReport,{
         dataList  : res
       });
@@ -98,9 +97,9 @@ var _report = {
   //测评报告
   evalReportEvent : function () {
     var rendHtml = '',
-        _this    = this;
-    _topicService.evalReport('',function (res) {
-      console.log(res);
+        _this    = this,
+        id = _util.getUrlParam('id');
+    _topicService.evalReport(id,function (res) {
       rendHtml = _util.renderHtml(templateReport,{
         dataList  : res
       });

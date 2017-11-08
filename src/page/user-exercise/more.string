@@ -1,0 +1,12 @@
+{{#dataCnt}}
+   {{#data}}
+      <dd class="user-item">
+        <div class="user-text">
+          <h3>{{name}}-{{time}}-{{major}}</h3>
+          <p>{{{content}}}</p>
+        </div>
+        <a class="user-report" data-id={{qid}} href="#">查看报告</a>
+        <input type="button" value="删除" data-id={{qid}} class="user-delete">
+      </dd>
+   {{/data}}
+{{/dataCnt}}

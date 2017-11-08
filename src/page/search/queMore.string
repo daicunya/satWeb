@@ -1,0 +1,10 @@
+{{#dataList}}
+  {{#data}}
+  <li class="search-item">
+    <a href=./readdetails.html?type=exercise&major={{major}}&qid={{qid}}>
+      <h2>{{name}}-{{time}}-{{major}}-{{number}}</h2>
+      <div class="search-cnt">{{{content}}}</div>
+    </a>
+  </li>
+  {{/data}}
+{{/dataList}}

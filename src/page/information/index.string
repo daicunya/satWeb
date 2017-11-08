@@ -1,8 +1,9 @@
 {{#dataList}}
   <!--新闻资讯-->
   <li class="p-info-list">
+  {{#news}}
     <ul>
-      {{#news}}
+      {{#data}}
       <li class="p-info-item">
         <a href=./info-details.html?id={{id}} data-id={{id}}>
           <div class="p-info-img">
@@ -20,13 +21,17 @@
           </div>
         </a>
       </li>
-      {{/news}}
+      {{/data}}
     </ul>
+    <div class="p-info-more news-more" data-p={{Current}} data-all={{Page}}>浏览更多</div>
+    <p class="p-info-bottom">我是有底线的</p>
+    {{/news}}
   </li>
   <!--学术报告-->
   <li class="p-info-list">
+  {{#report}}
     <ul>
-      {{#report}}
+      {{#data}}
       <li class="p-info-item">
         <a href=./info-details.html?id={{id}} data-id={{id}}>
           <div class="p-info-img">
@@ -44,13 +49,17 @@
           </div>
         </a>
       </li>
-      {{/report}}
+      {{/data}}
     </ul>
+    <div class="p-info-more news-more" data-p={{Current}} data-all={{Page}}>浏览更多</div>
+    <p class="p-info-bottom">我是有底线的</p>
+    {{/report}}
   </li>
   <!--高分经验-->
   <li class="p-info-list">
+  {{#experience}}
     <ul>
-      {{#experience}}
+      {{#data}}
       <li class="p-info-item">
         <a href=./info-details.html?id={{id}} data-id={{id}}>
           <div class="p-info-img">
@@ -68,7 +77,10 @@
           </div>
         </a>
       </li>
-      {{/experience}}
+      {{/data}}
     </ul>
+    <div class="p-info-more news-more" data-p={{Current}} data-all={{Page}}>浏览更多</div>
+    <p class="p-info-bottom">我是有底线的</p>
+    {{/experience}}
   </li>
 {{/dataList}}

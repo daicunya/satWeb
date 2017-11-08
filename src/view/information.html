@@ -8,13 +8,15 @@
 <%= require('html-loader!./layout/header.html')%>
 <section>
   <div class="p-shade"></div>
-  <ul class="p-tag-list exer-list border-1px">
-    <li class="active">新闻资讯</li>
-    <li>学术报告</li>
-    <li>高分经验</li>
+  <ul class="p-tag-list information-list border-1px">
+    <li class="active" data-value="news">新闻资讯</li>
+    <li data-value="report">学术报告</li>
+    <li data-value="experience">高分经验</li>
   </ul>
   <ul class="p-tag-cnt info-wrap">
-
+    <!--<li class="p-info-list"></li>-->
+    <!--<li class="p-info-list"></li>-->
+    <!--<li class="p-info-list"></li>-->
   </ul>
 </section>
 <!--底部导航-->

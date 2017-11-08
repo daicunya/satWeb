@@ -7,21 +7,16 @@
       <dd class="user-item">
         <div class="user-text">
           <h3>{{name}}-{{time}}-{{major}}</h3>
-          <!--<p><i class="fa fa-clock-o"></i>2017-07-23 12:12:12</p>-->
+          <p>{{{content}}}</p>
         </div>
-        <a class="user-report" data-id={{qid}} href="#">查看报告</a>
+        <a class="user-report" data-id={{qid}} href=./readdetails.html?type=exercise&major=Reading&qid={{qid}}>查看详情</a>
         <input type="button" value="删除" data-id={{qid}} class="user-delete">
       </dd>
       {{/data}}
     </dl>
     <!--分页-->
-    <ul class="p-page">
-      <li class="p-first" data-num="1">首页</li>
-      <li class="p-prev" data-num="1">上一页</li>
-      <li class="p-pos">1/{{allPage}}</li>
-      <li class="p-next" data-num="2">下一页</li>
-      <li class="p-end" data-num="3">末页</li>
-    </ul>
+    <div class="p-info-more news-more" data-p={{ReadingCurrent}} data-all={{ReadingPage}}>浏览更多</div>
+    <p class="p-info-bottom">我是有底线的</p>
     {{/Reading}}
   </li>
   <li class="user-list">
@@ -31,21 +26,16 @@
       <dd class="user-item">
         <div class="user-text">
           <h3>{{name}}-{{time}}-{{major}}</h3>
-          <!--<p><i class="fa fa-clock-o"></i>2017-07-23 12:12:12</p>-->
+          <p>{{{content}}}</p>
         </div>
-        <a class="user-report" data-id={{qid}} href="#">查看报告</a>
+        <a class="user-report" data-id={{qid}} href=./readdetails.html?type=exercise&major=Writing&qid={{qid}}>查看详情</a>
         <input type="button" value="删除" data-id={{qid}} class="user-delete">
       </dd>
       {{/data}}
     </dl>
     <!--分页-->
-    <ul class="p-page">
-      <li class="p-first" data-num="1">首页</li>
-      <li class="p-prev" data-num="1">上一页</li>
-      <li class="p-pos">1/3</li>
-      <li class="p-next" data-num="2">下一页</li>
-      <li class="p-end" data-num="3">末页</li>
-    </ul>
+    <div class="p-info-more news-more" data-p={{WritingCurrent}} data-all={{WritingPage}}>浏览更多</div>
+    <p class="p-info-bottom">我是有底线的</p>
     {{/Writing}}
   </li>
   <li class="user-list">
@@ -55,21 +45,16 @@
       <dd class="user-item">
         <div class="user-text">
           <h3>{{name}}-{{time}}-{{major}}</h3>
-          <!--<p><i class="fa fa-clock-o"></i>2017-07-23 12:12:12</p>-->
+          <p>{{{content}}}</p>
         </div>
-        <a class="user-report" data-id={{qid}} href="#">查看报告</a>
+        <a class="user-report" data-id={{qid}} href=./readdetails.html?type=exercise&major=Math1&qid={{qid}}>查看详情</a>
         <input type="button" value="删除" data-id={{qid}} class="user-delete">
       </dd>
       {{/data}}
     </dl>
     <!--分页-->
-    <ul class="p-page">
-      <li class="p-first" data-num="1">首页</li>
-      <li class="p-prev" data-num="1">上一页</li>
-      <li class="p-pos">1/{{allPage}}</li>
-      <li class="p-next" data-num="2">下一页</li>
-      <li class="p-end" data-num="3">末页</li>
-    </ul>
+    <div class="p-info-more news-more" data-p={{MathCurrent}} data-all={{MathPage}}>浏览更多</div>
+    <p class="p-info-bottom">我是有底线的</p>
     {{/Math}}
   </li>
 {{/data}}

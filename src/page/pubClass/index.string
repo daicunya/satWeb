@@ -22,6 +22,7 @@
   {{/new}}
   <!--历史公开课-->
   <h2 class="pub-title fColor">历史公开课</h2>
+  <div class="pub-history">
   {{#history}}
     <div class="pub-wrap">
       <div class="pub-img">
@@ -35,10 +36,13 @@
           <p class="fr"><i class="fa fa-commenting-o"></i>{{hits}}</p>
         </div>
         <div class="apply clearfix">
-          <a class="fl" href=./info-details.html?id={{id}}>查看详情</a>
-          <a class="fr" href="#">立即回放</a>
+          <a class="fr" href=./info-details.html?id={{id}}>查看详情</a>
+          <!--<a class="fr" href="#">立即回放</a>-->
         </div>
       </div>
     </div>
   {{/history}}
+  </div>
+  <div class="p-info-more" data-p={{historyCurrent}} data-all={{historyPage}}>浏览更多</div>
+  <p class="p-info-bottom">我是有底线的</p>
 {{/dataList}}

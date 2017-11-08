@@ -1,0 +1,62 @@
+@import "../common/css/mixin.styl";
+
+.search-wrap
+  width: 90%
+  margin: 30% auto 0
+  border: 1px solid #40b0ef
+  .search-select
+    position: relative
+    width: 6rem
+    l-height(4rem)
+    text-align: center
+    background-color: #f5f5f5
+    &>ul
+      display: none
+      position: absolute
+      top: 4.2rem
+      width: 6rem
+      background-color: #f5f5f5
+      li
+        l-height(3rem)
+        &:first-child
+          b-bottom-1px(#ccc)
+    .search-icon
+      position: absolute
+      top: 50%
+      right: 10%
+      trans-xy(0,-50%)
+  .search-btn
+    width: 5rem
+    l-height(4rem)
+    background-color: #40b0ef
+    color: #fff
+  .search-text
+    margin: 0 5.1rem 0 6.2rem
+    input
+      width: 100%
+      padding-left: 1rem
+      l-height(4rem)
+      font-size: 1.2rem
+  input
+    outline: none
+    border: 0
+.search-result
+  margin-top: 5%
+  &>ul
+    padding: 1rem
+    .search-item
+      margin-bottom: .5rem
+      background-color: #f5f5f5
+      border-radius(.5rem)
+      &>a
+        display: block
+        padding: .5rem 1rem
+        h2
+          l-height(2.5rem)
+          font-size: 1.4rem
+          white-space: nowrap
+          text-overflow: ellipsis
+          overflow: hidden
+        .search-cnt
+          font-size: 1.2rem
+          lind-two()

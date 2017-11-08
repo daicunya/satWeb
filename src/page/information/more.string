@@ -1,0 +1,23 @@
+{{#dataCnt}}
+{{#data}}
+{{#data}}
+<li class="p-info-item">
+  <a href=./info-details.html?id={{id}} data-id={{id}}>
+    <div class="p-info-img">
+      <img src={{pic}} alt="图片">
+    </div>
+    <div href="#" class="p-info-text">
+      <h2>{{title}}</h2>
+      <blockquote class="p-ic-wrap clearfix">
+        <i class="fl">{{publishTime}}</i>
+        <em class="fr">
+          {{hits}}
+          <i class="fa fa-commenting-o"></i>
+        </em>
+      </blockquote>
+    </div>
+  </a>
+</li>
+{{/data}}
+{{/data}}
+{{/dataCnt}}

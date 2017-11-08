@@ -21,5 +21,5 @@
     <h2>课程特色</h2>
     <div>{{{plan}}}</div>
   </div>
-  <a class="appointment bColor" href="#">立即预约</a>
+  <a class="appointment bColor" target="blank" href="mqqwpa://im/chat?chat_type=wpa&uin=2992826058&version=1&src_type=web&web_src=http://m.haishiit.com/">立即预约</a>
 {{/dataList}}

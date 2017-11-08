@@ -1,0 +1,141 @@
+{{#dataList}}
+<!--banner图-->
+<div class="p-bnr-wrap" id="banner-wrap">
+  <ul class="p-bnr-list" id="banner-list">
+    {{#banner}}
+      <li><a href={{url}}><img src=http://sat.com{{pic}} alt={{alt}}></a></li>
+    {{/banner}}
+  </ul>
+</div>
+<!--公开课-->
+<div class="p-index-wrap pubClass">
+  <h2 class="p-index-title clearfix">
+    公开课
+    <a class="fr" href="./pubClass.html">更多<i class="fa fa-angle-double-right"></i></a>
+  </h2>
+  <ul class="p-index-ul pubClass-cnt clearfix">
+    {{#publicClass}}
+      <li class="item">
+        <a href=./info-details.html?id={{id}}>
+          <div><img src={{pic}} alt="公开课图片"></div>
+          <p>{{title}}</p>
+        </a>
+      </li>
+    {{/publicClass}}
+  </ul>
+</div>
+<!--做题系统-->
+<div class="p-index-wrap topic">
+  <h2 class="p-index-title clearfix">
+    做题系统
+  </h2>
+  <ul class="p-index-ul topic-cnt clearfix">
+    <li class="item">
+      <a href=./exercise.html>
+        <img src="../../../images/index-exer01.jpg" alt="公开课图片">
+        <div class="topic-icon">
+          <p><i class="fa fa-eye"></i></p>
+          <p>阅读练习</p>
+        </div>
+      </a>
+    </li>
+    <li class="item">
+      <a href=./exercise.html>
+        <img src="../../../images/index-exer02.jpg" alt="公开课图片">
+        <div class="topic-icon">
+          <p><i class="fa fa-font"></i></p>
+          <p>文法练习</p>
+        </div>
+      </a>
+    </li>
+    <li class="item">
+      <a href=./exercise.html>
+        <img src="../../../images/index-exer03.jpg" alt="公开课图片">
+        <div class="topic-icon">
+          <p><i class="fa fa-plus"></i></p>
+          <p>数学练习</p>
+        </div>
+      </a>
+    </li>
+    <li class="item">
+      <a href=./mock.html>
+        <img src="../../../images/index-exer04.jpg" alt="公开课图片">
+        <div class="topic-icon">
+          <p><i class="fa fa-pencil"></i></p>
+          <p>模考</p>
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>
+<!--推荐课程-->
+<div class="p-index-wrap course">
+  <h2 class="p-index-title clearfix">
+    推荐课程
+    <a class="fr" href="./course.html">更多<i class="fa fa-angle-double-right"></i></a>
+  </h2>
+  <ul class="p-index-ul course-cnt clearfix">
+    {{#class}}
+      <li class="item">
+        <a href=./course-details.html?id={{id}}>
+          <img src="../../../images/index-course01.jpg" alt="公开课图片">
+          <div class="topic-icon">
+            <p><i class="fa fa-eye"></i></p>
+            <p>{{cate}}</p>
+          </div>
+        </a>
+      </li>
+    {{/class}}
+  </ul>
+</div>
+<!--名师团队-->
+<div class="p-index-wrap p-bnr-wrap teacher" id="teacherWrap">
+  <h2 class="p-index-title clearfix">
+    名师团队
+    <a class="fr" href="./teacher.html">更多<i class="fa fa-angle-double-right"></i></a>
+  </h2>
+  <ul class="p-index-ul p-bnr-list teacher-cnt clearfix" id="teacherList">
+    {{#teacher}}
+      <li class="item">
+        <a href=./teacher-details.html?id={{id}}>
+          <img src={{pic}} alt="老师图片">
+          <p>{{name}}:{{subject}}</p>
+        </a>
+      </li>
+    {{/teacher}}
+  </ul>
+</div>
+<!--资讯-->
+<div class="p-index-wrap info">
+  <h2 class="p-index-title clearfix">
+    文章资讯
+    <a class="fr" href="./information.html">更多<i class="fa fa-angle-double-right"></i></a>
+  </h2>
+  <div class="info-nav">
+    <a class="border-1px" href="./information.html">新闻资讯</a>
+    <a class="border-1px" href="./information.html">学术报告</a>
+    <a href="./information.html">高分经验</a>
+  </div>
+  <ul class="info-wrap">
+    {{#news}}
+      <li>
+        <a href=./info-details.html?id={{id}} data-id={{id}}>
+          <div class="p-info-img">
+            <img src={{pic}} alt="图片">
+          </div>
+          <div href="#" class="p-info-text">
+            <h2>{{title}}</h2>
+            <blockquote class="p-ic-wrap clearfix">
+              <i class="fl">{{publishTime}}</i>
+              <em class="fr">
+                {{hits}}
+                <i class="fa fa-commenting-o"></i>
+              </em>
+            </blockquote>
+          </div>
+        </a>
+      </li>
+    {{/news}}
+  </ul>
+</div>
+{{/dataList}}

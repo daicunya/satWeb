@@ -100,10 +100,23 @@ var _userService = {
     })
   },
   //删除做题记录
-  delTopic          : function (dataList,resolve,reject) {
+  delTopic          : function (id,resolve,reject) {
     _util.request({
       url: _util.getServerUrl('/cn/wap-api/removed'),
-      data: dataList,
+      data: {
+        id : id
+      },
+      success: resolve,
+      error: reject
+    })
+  },
+  //删除测评记录
+  delEval          : function (id,resolve,reject) {
+    _util.request({
+      url: _util.getServerUrl('/cn/wap-api/delete'),
+      data: {
+        id : id
+      },
       success: resolve,
       error: reject
     })

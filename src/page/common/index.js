@@ -10,23 +10,37 @@ var $ = require('util/js/zepto.min.js');
 
 var _public = {
   init: function () {
+    this.onLoad();
     this.bindEvent();
   },
+  onLoad : function () {
+    var url = window.location.href;
+    if (url == 'http://localhost:8080/dist/view') {
+      location.href = 'http://localhost:8080/dist/view/index.html';
+    }
+  },
   bindEvent: function () {
-    var _this = this;
     this.tagEvent();
+    $('.p-to-top').tap(function () {
+      $('html').scrollTop(0);
+    })
   },
   //标签切换事件
   tagEvent: function () {
     $('.p-tag-list>li').tap(function () {
       var i = $(this).index();
-      $('.p-tag-list>li').removeClass('active');
-      $(this).addClass('active');
-      $('.p-tag-cnt>li').hide();
-      $('.p-tag-cnt>li').eq(i).show();
+      $(this).addClass('active').siblings().removeClass('active');
+      $('.p-tag-cnt>li').eq(i).show().siblings().hide();
     })
   }
 };
 $(function () {
   _public.init();
-})
+});
+window.onscroll = function () {
+  if ($('html').scrollTop() >= $('html').height()/2) {
+    $('.p-to-top').show();
+  } else {
+    $('.p-to-top').hide();
+  }
+}

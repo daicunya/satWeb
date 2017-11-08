@@ -142,10 +142,12 @@ var _mockService = {
     })
   },
   //测评报告
-  evalReport        : function (dataList,resolve,reject) {
+  evalReport        : function (id,resolve,reject) {
     _util.request({
       url: _util.getServerUrl('/cn/wap-api/evaulation-report'),
-      data: dataList,
+      data: {
+        id : id
+      },
       success: resolve,
       error: reject
     })

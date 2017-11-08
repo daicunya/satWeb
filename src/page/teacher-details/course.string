@@ -1,0 +1,16 @@
+{{#dataCnt}}
+<!--推荐课程-->
+  <h2 class="course-title">推荐课程</h2>
+  <ul class="course clearfix">
+    {{#class}}
+    <li class="course-list">
+      <a href=./course-details.html?id={{id}}>
+        <div class="course-img">
+          <img src={{pic}} alt="图片">
+        </div>
+        <p>{{cate}}</p>
+      </a>
+    </li>
+    {{/class}}
+  </ul>
+{{/dataCnt}}

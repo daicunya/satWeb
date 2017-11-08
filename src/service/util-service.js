@@ -66,12 +66,23 @@ var _utilService = {
       error: reject
     })
   },
+  //名师详情页
   teacherDetails  : function (id,resolve,reject) {
     _util.request({
       url: _util.getServerUrl('/cn/wap-api/teacher-details'),
       data : {
         id : id
       },
+      success: resolve,
+      error: reject
+    })
+  },
+  //搜索
+  search : function (dataList,resolve,reject) {
+    _util.request({
+      url: _util.getServerUrl('/cn/wap-api/search'),
+      method : 'get',
+      data : dataList,
       success: resolve,
       error: reject
     })

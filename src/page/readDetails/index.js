@@ -18,16 +18,18 @@ var ALLTIME    = '',
 var _mockDetail = {
   data : {
     type : _util.getUrlParam('type') || '',
-    qid  : _util.getUrlParam('qid')  || '',
+    qid  : _util.getUrlParam('qid')  || '',//个人中心、报告进入的会有qid
     listParam : {
       major : _util.getUrlParam('major') || '',
       num : _util.getUrlParam('num') || '',
       tpId : _util.getUrlParam('tpId') || ''
     },
+    //模考数据
     mockParam : {
       tpId : _util.getUrlParam('tpId') || '',
       major : _util.getUrlParam('major') || ''
     },
+    //测评数据
     evalParam  : {
       tpId  : _util.getUrlParam('tpId') || ''
     }
@@ -47,17 +49,16 @@ var _mockDetail = {
         this.mockDetailsEvent();
       } else if (type == 'evaluation'){
         this.evalDetailsEvent();
-        // this.evalNext();
       }
     }
-
   },
   bindEvent         : function () {
     var _this = this,
         type  = this.data.type;
-    this.selectEvent();
-    this.progressEvent();
-    this.mathGapEvent();
+    this.selectEvent();//选择题选项
+    this.progressEvent();//查看答案详情
+    this.mathGapEvent();//数学填空事件
+    //下一题
     $('.read-ul').bind('tap','.read-next',function () {
       if (type == 'exercise') {
         _this.exerNextEvent('next');
@@ -67,11 +68,13 @@ var _mockDetail = {
         _this.evalNext('next');
       }
     });
+    //上一题
     $('.read-ul').bind('tap','.read-prev',function () {
       if (type == 'exercise') {
         _this.exerNextEvent('up');
       }
     });
+    //向左滑动下一题
     $('section').swipeLeft(function () {
       var bl = $('.read-next').css('display')
       if ((type == 'exercise') && (bl == 'block')) {
@@ -82,6 +85,7 @@ var _mockDetail = {
         _this.evalNext('next');
       }
     });
+    //向右滑动上一题
     $('section').swipeRight(function () {
       if (($('.read-prev').length) && (type=='exercise')) {
         _this.exerNextEvent('up');
@@ -90,14 +94,14 @@ var _mockDetail = {
     //提交事件
     $('.read-ul').bind('tap','.read-submit',function () {
       if (_this.data.type == 'exercise') {
-        _this.submitDetails('next');
+        _this.submitDetails('next');//练习提交
       } else if (_this.data.type == 'mock') {
-        _this.mockSubmitEvent();
+        _this.mockSubmitEvent();//模考提交
       } else {
-        _this.evalSubmitEvent();
+        _this.evalSubmitEvent();//测评提交
       }
     });
-  //  弹窗继续事件
+    //弹窗继续事件
     $('.read-ul').bind('tap','.read-win-continue',function () {
       $('.read-window').hide();
       $('.read-window>div').hide();
@@ -119,6 +123,24 @@ var _mockDetail = {
         console.log(err)
       })
     });
+    //收藏事件
+    $('.read-ul').on('tap','.read-progress i',function () {
+      var _this = this,
+          data = {
+              qid : $('.read-question').data('qid'),
+              flag : 0
+          };
+      if ($(this).hasClass('fa-star-o')) {
+        _topicService.collection(data,function (res) {
+          $(_this).removeClass('fa-star-o').addClass('fa-star active').html('已收藏');
+        })
+      } else {
+        data.flag = 1;
+        _topicService.collection(data,function (res) {
+          $(_this).removeClass('fa-star active').addClass('fa-star-o').html('收藏');
+        })
+      }
+    })
   },
   //做题计时(单题)
   timeEvent         : function (tp,st) {
@@ -174,13 +196,14 @@ var _mockDetail = {
       sessionStorage.setItem('countTime',t);
     },1000);
   },
+  //休息事件
   relaxTimeEvent    : function (t) {
     var _this = this;
     clearInterval(RELAXTIME);
     RELAXTIME = setInterval(function () {
       t--;
       var m = Math.floor(t/60),
-          s = Math.floor(t%60),
+          s = Math.floor(t%60);
       m = _this.checkTimeEvent(m);
       s = _this.checkTimeEvent(s);
       if(t == 0) {
@@ -223,6 +246,7 @@ var _mockDetail = {
     });
     $('.read-ul').bind('tap','.math-sure',function () {
       _this.mathHiddenEvent();
+      val = [];
     })
   },
   //隐藏数学填空面板
@@ -233,8 +257,8 @@ var _mockDetail = {
   },
   //查看解析事件
   progressEvent     : function () {
-    $('.read-ul').bind('tap','.read-check',function () {
-     $(this).toggleClass('active');
+    $('.read-ul').on('tap','.read-check',function () {
+      $(this).show().toggleClass('active');
       $('.read-analytic').toggleClass('active');
     })
   },
@@ -244,14 +268,6 @@ var _mockDetail = {
         readHtml  = '',
         qid       = this.data.qid,
         _$readUl  = $('.read-ul');
-    //查看做题详情与练习第一题
-    // if (qid) {
-    //   var listParam = {
-    //     qid : qid
-    //   }
-    // } else {
-    //   var listParam = this.data.listParam;
-    // }
     var listParam  =this.data.listParam;
     qid ? (listParam.qid = qid) : listParam;
     _topicService.exerciseDetail(listParam,function (res) {
@@ -264,21 +280,28 @@ var _mockDetail = {
       _this.showTag(res);//默认显示原文或题目
       _this.timeEvent('exercise');
       //做过的题目直接显示答案
-      if (res.userans == 'A') {
-        $('.read-li').eq(0).children('.read-select').addClass('active');
-      } else if (res.userans == 'B'){
-        $('.read-li').eq(1).children('.read-select').addClass('active');
-      } else if (res.userans == 'C') {
-        $('.read-li').eq(2).children('.read-select').addClass('active');
-      } else if (res.userans == 'D') {
-        $('.read-li').eq(3).children('.read-select').addClass('active');
+      if (res.userans) {
+        if (res.userans == 'A') {
+          $('.read-li').eq(0).children('.read-select').addClass('active');
+        } else if (res.userans == 'B'){
+          $('.read-li').eq(1).children('.read-select').addClass('active');
+        } else if (res.userans == 'C') {
+          $('.read-li').eq(2).children('.read-select').addClass('active');
+        } else if (res.userans == 'D') {
+          $('.read-li').eq(3).children('.read-select').addClass('active');
+        } else {
+          $('.math-gap input').val(res.userans);
+        }
       }
+
       if (qid) {
-        $('.read-ul .read-check').addClass('active');
-        $('.read-analytic').addClass('active');
+        $('.read-ul .read-check').show();
       } else {
         $('.read-ul .read-check').hide();
         $('.read-analytic').hide();
+      }
+      if (res.collection == 1) {
+        $('.read-ul .read-progress i').removeClass('fa-star-o').addClass('fa-star active').html('已收藏')
       }
     },function (err) {
       console.log(err);
@@ -347,22 +370,29 @@ var _mockDetail = {
         }
       }
       //做过的题目直接显示答案
-      if (res.userans == 'A') {
-        $('.read-li').eq(0).children('.read-select').addClass('active');
-      } else if (res.userans == 'B'){
-        $('.read-li').eq(1).children('.read-select').addClass('active');
-      } else if (res.userans == 'C') {
-        $('.read-li').eq(2).children('.read-select').addClass('active');
-      } else if (res.userans == 'D') {
-        $('.read-li').eq(3).children('.read-select').addClass('active');
+      if (res.userans) {
+        if (res.userans == 'A') {
+          $('.read-li').eq(0).children('.read-select').addClass('active');
+        } else if (res.userans == 'B'){
+          $('.read-li').eq(1).children('.read-select').addClass('active');
+        } else if (res.userans == 'C') {
+          $('.read-li').eq(2).children('.read-select').addClass('active');
+        } else if (res.userans == 'D') {
+          $('.read-li').eq(3).children('.read-select').addClass('active');
+        } else {
+          $('.math-gap input').val(res.userans);
+        }
       }
       //题目详情显示答案与解析
       if (_this.data.qid) {
-        $('.read-ul .read-check').addClass('active');
-        $('.read-analytic').addClass('active');
+        $('.read-ul .read-check').show();
       } else {
         $('.read-ul .read-check').hide();
         $('.read-analytic').hide();
+      }
+      //判断是否有收藏
+      if (res.collection == 1) {
+        $('.read-ul .read-progress i').removeClass('fa-star-o').addClass('fa-star active').html('已收藏')
       }
     })
   },
@@ -419,7 +449,6 @@ var _mockDetail = {
         mockParam = this.data.mockParam,
         _$readUl  = $('.read-ul');
     _topicService.mockDetails(mockParam,function (res) {
-      console.log(res);
       readHtml = _util.renderHtml(templateIndex,{
         dataList : res
       });
@@ -431,6 +460,7 @@ var _mockDetail = {
       _this.countTimeEvent(res.sectionTime*60);//每个小结倒计时
       $('.read-ul .read-check').hide();
       $('.read-analytic').hide();
+      $('.read-ul .read-progress i').hide();
     },function (err) {
       console.log(err);
     });
@@ -468,7 +498,6 @@ var _mockDetail = {
     }
     //模考下一题接口
     _topicService.mockNext(listParam, function (res) {
-      console.log(res);
       if ((major == 'Math1') || (major == 'Math2')) {
         if (res.data.essay) {
           readHtml = _util.renderHtml(templateIndex, {
@@ -499,6 +528,7 @@ var _mockDetail = {
       }
       $('.read-ul .read-check').hide();
       $('.read-analytic').hide();
+      $('.read-ul .read-progress i').hide();
       //判断显示下一题还是提交
       if ((!res.nextId)&&(!res.nextSection)) {
         $('.read-next').hide();
@@ -552,6 +582,7 @@ var _mockDetail = {
       $('.read-ul').html(rendHtml);
       _this.showTag(res);
       $('.read-ul .read-check').hide();
+      $('.read-ul .read-progress i').hide();//收藏隐藏
       $('.read-analytic').hide();
       _this.timeEvent('mock');//每个题目做题时间
       _this.totalTime();//模考总做题时间
@@ -590,7 +621,6 @@ var _mockDetail = {
     }
     //测评下一题接口
     _topicService.evalNext(listParam, function (res) {
-      console.log(res);
       rendHtml = _util.renderHtml(templateIndex,{
         dataList : res
       });
@@ -598,6 +628,7 @@ var _mockDetail = {
       $('.read-ul').html(rendHtml);
       _this.showTag(res);
       $('.read-ul .read-check').hide();
+      $('.read-ul .read-progress i').hide();//收藏隐藏
       $('.read-analytic').hide();
       if (res.data.major == "Translation") {
         $('.math-gap').hide();
@@ -629,7 +660,8 @@ var _mockDetail = {
       qid       : $('.read-question').data('qid'),
       tpId      : $('#j-tpId').data('tpid'),
       section   : $('#j-section').data('sec'),
-      number    : $('.read-question').data('num')
+      number    : $('.read-question').data('num'),
+      time      : sessionStorage.getItem('alltime')
     };
     _topicService.evalNext(listParam, function (res) {});
     window.location.href = './report.html?type=evaluation';

@@ -27,8 +27,8 @@ var _util = {
         }
         // 没有登录状态，需要强制登录
         else if(5 === res.code){
-          // _this.doLogin();
-          alert('请登录');
+          _this.doLogin();
+          // alert('请登录');
         }
         // 请求数据错误
         else if(1 === res.code){

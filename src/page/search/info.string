@@ -1,0 +1,14 @@
+{{#dataList}}
+<ul>
+{{#data}}
+  <li class="search-item">
+    <a href=./info-details.html?id={{id}}>
+      <h2>{{title}}</h2>
+      <div class="search-cnt">{{summary}}</div>
+    </a>
+  </li>
+  {{/data}}
+</ul>
+<div class="p-info-more" data-p={{Current}} data-all={{Page}}>浏览更多</div>
+<p class="p-info-bottom">我是有底线的</p>
+{{/dataList}}

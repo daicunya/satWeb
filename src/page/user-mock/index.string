@@ -14,13 +14,8 @@
         </dd>
       {{/data}}
       </dl>
-      <ul class="p-page">
-        <li class="p-first" data-num="1">首页</li>
-        <li class="p-prev" data-num="1">上一页</li>
-        <li class="p-pos">1/{{allPage}}</li>
-        <li class="p-next" data-num="2">下一页</li>
-        <li class="p-end" data-num="3">末页</li>
-      </ul>
+      <div class="p-info-more news-more" data-p={{allCurrent}} data-all={{allPage}}>浏览更多</div>
+      <p class="p-info-bottom">我是有底线的</p>
     {{/all}}
   </li>
   <li class="user-list">
@@ -37,13 +32,8 @@
         </dd>
       {{/data}}
     </dl>
-    <ul class="p-page">
-      <li class="p-first" data-num="1">首页</li>
-      <li class="p-prev" data-num="1">上一页</li>
-      <li class="p-pos">1/{{singlePage}}</li>
-      <li class="p-next" data-num="2">下一页</li>
-      <li class="p-end" data-num="3">末页</li>
-    </ul>
+    <div class="p-info-more news-more" data-p={{singleCurrent}} data-all={{singlePage}}>浏览更多</div>
+    <p class="p-info-bottom">我是有底线的</p>
     {{/single}}
   </li>
 {{/data}}

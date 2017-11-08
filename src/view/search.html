@@ -9,7 +9,23 @@
 <%= require('html-loader!./layout/header.html')%>
 <!--内容区-->
 <section class="search">
+  <div class="search-wrap clearfix">
+    <div class="fl search-select">
+      <p>题目</p>
+      <ul>
+        <li class="border-1px">题目</li>
+        <li>资讯</li>
+      </ul>
+      <i class="search-icon fa fa-angle-down"></i>
+    </div>
+    <input class="fr search-btn" type="button" value="搜索">
+    <div class="search-text">
+      <input  type="search">
+    </div>
+  </div>
+  <div class="search-result">
 
+  </div>
 </section>
 <!--底部导航-->
 <%= require('html-loader!./layout/footer.html') %>

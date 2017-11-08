@@ -82,9 +82,10 @@
     <div class="read-progress clearfix">
       <p class="fl read-check">查看解析</p>
       <p class="fr">{{n}}</p>
+      <i class="fa fa-star-o fr">收藏</i>
     </div>
     <!--答案解析-->
-    <div class="read-analytic active">
+    <div class="read-analytic">
       <p>答案:<span>{{answer}}</span></p>
       <div>{{analysis}}</div>
     </div>

@@ -5,9 +5,10 @@
 require('./index.styl');
 require('../common/header/index.js');
 require('../common/footer/index.js');
-var _util             = require('util/util.js');
-var _utilService = require('service/util-service.js');
-var template    = require('./index.string');
+var _util           = require('util/util.js');
+var _utilService    = require('service/util-service.js');
+var template        = require('./index.string');
+var templateCourse  = require('./course.string');
 
 $(function () {
   var id = _util.getUrlParam('id'),
@@ -16,7 +17,12 @@ $(function () {
     rendHtml = _util.renderHtml(template,{
       dataList : res
     });
-    console.log(res);
-    $('.teacher-details').html(rendHtml);
+    _utilService.courseIndex(function (res) {
+      rendHtml+= _util.renderHtml(templateCourse,{
+        dataCnt : res
+      });
+      $('.teacher-details').append(rendHtml);
+    })
   })
+
 })

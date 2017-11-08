@@ -28,10 +28,9 @@ table
   border-collapse:collapse;
   border-spacing:0;
 
-
 section
-  margin-top: 4rem;
-  margin-bottom: 7rem;
+  margin: 4rem 0 7rem 0
+  padding-bottom: 1rem
 .p-shade
   position: fixed
   top: 0
@@ -63,6 +62,50 @@ section
   background-color: #40b0ef
 .fColor
   color: #40b0ef
+//到顶部按钮
+.p-to-top
+  position: fixed
+  right: 1rem
+  bottom: 20%
+  width: 3rem
+  l-height(3rem)
+  background-color: #40b0ef
+  text-align: center
+  display: none
+  i
+    color: #fff
+    font-size: 1.8rem
+//浏览更多
+.p-info-more
+  width: 10rem
+  l-height(2.5rem)
+  margin: 1rem auto 0
+  border: 1px solid #40b0ef
+  border-radius(1rem)
+  font-size: 1.2rem
+  text-align: center
+  font-weight: 600
+.p-info-bottom
+  position: relative
+  width: 8rem
+  margin: 1rem auto 0
+  text-align: center
+  color: #ccc
+  display: none
+  &:before,
+  &:after
+    position: absolute
+    content: ''
+    display: block
+    top: 50%
+    trans-xy(0,-50%)
+    width: 5rem
+    height: 1px
+    background-color: #ccc
+  &:before
+    left: -5rem
+  &:after
+    right: -5rem
 @media (-webkit-min-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 1.5)
   .border-1px
     &::after

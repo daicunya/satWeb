@@ -1,0 +1,37 @@
+.p-bnr-wrap
+  position: relative
+  .p-bnr-list
+    /*高度塌陷*/
+    overflow: hidden
+    li
+      float: left
+      height: 15rem
+    img
+      width: 100%
+      height: 100%
+      vertical-align: middle
+  .point
+    position: absolute;
+    bottom: 6px;
+    text-align: center;
+    width: 100%;
+    span
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background-color: #b0b0b0;
+      border-radius: 50%;
+      margin: 0 4px;
+      &.active
+        background-color: #fff
+
+//@media (-webkit-min-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 1.5)
+//  #banner-wrap
+//    #banner-list
+//      li
+//        height: 12rem
+//@media (-webkit-min-device-pixel-ratio: 2),(min-device-pixel-ratio: 2)
+//  #banner-wrap
+//    #banner-list
+//      li
+//        height: 18rem

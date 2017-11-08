@@ -1,0 +1,21 @@
+{{#dataCnt}}
+{{#history}}
+<div class="pub-wrap">
+  <div class="pub-img">
+    <img src={{pic}} alt="图片">
+  </div>
+  <div class="pub-cnt">
+    <h2>{{title}}</h2>
+    <p>{{summary}}</p>
+    <div class="pub-icon clearfix">
+      <p class="fl"><i class="fa fa-clock-o"></i>{{publishTime}}</p>
+      <p class="fr"><i class="fa fa-commenting-o"></i>{{hits}}</p>
+    </div>
+    <div class="apply clearfix">
+      <a class="fl" href=./info-details.html?id={{id}}>查看详情</a>
+      <a class="fr" href="#">立即回放</a>
+    </div>
+  </div>
+</div>
+{{/history}}
+{{/dataCnt}}

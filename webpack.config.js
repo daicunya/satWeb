@@ -6,7 +6,6 @@ var path              = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
-
 //环境变量配置
 var WEBPACK_ENV = process.env.WEBPACK_ENV || 'dev';
 // console.log(WEBPACK_ENV);
@@ -14,12 +13,13 @@ var WEBPACK_ENV = process.env.WEBPACK_ENV || 'dev';
 //获取html-webpack-plugin 参数的方法
 var getHtmlConfig = function (name,title) {
   return {
-    template: './src/view/'+ name +'.html',
-    filename: 'view/'+ name +'.html',
-    inject: true,
-    hash: true,
-    title: title,
-    chunks: ['common',name]
+    template  : './src/view/'+ name +'.html',
+    filename  : 'view/'+ name +'.html',
+    favicon   : './favicon.ico',
+    inject    : true,
+    hash      : true,
+    title     : title,
+    chunks    : ['common',name]
   }
 };
 //webpack config
@@ -52,7 +52,8 @@ var config = {
     'pubClass'          : ['./src/page/pubClass/index.js'],
     'pubDetails'        : ['./src/page/pubDetails/index.js'],
     'teacher'           : ['./src/page/teacher/index.js'],
-    'teacher-details'   : ['./src/page/teacher-details/index.js']
+    'teacher-details'   : ['./src/page/teacher-details/index.js'],
+    'about'             : ['./src/page/about/index.js']
   },
   //output: 目标文件
   output: {
@@ -79,7 +80,7 @@ var config = {
       util            : __dirname + '/src/util',
       page            : __dirname + '/src/page',
       service         : __dirname + '/src/service',
-      images          : __dirname + '/src/images'
+      images          : __dirname + '/images'
     }
   },
   plugins: [
@@ -116,10 +117,12 @@ var config = {
     new HtmlWebpackPlugin(getHtmlConfig('pubClass','公开课')),
     new HtmlWebpackPlugin(getHtmlConfig('pubDetails','公开课详情')),
     new HtmlWebpackPlugin(getHtmlConfig('teacher','名师团队')),
-    new HtmlWebpackPlugin(getHtmlConfig('teacher-details','名师详情'))
+    new HtmlWebpackPlugin(getHtmlConfig('teacher-details','名师详情')),
+    new HtmlWebpackPlugin(getHtmlConfig('about','关于我们'))
   ]
 };
 if ('dev' === WEBPACK_ENV) {
   config.entry.common.push('webpack-dev-server/client?http://localhost:8080/');
+  // config.entry.common.push('webpack-dev-server/client?http://192.168.1.38:8080/');
 }
 module.exports = config;
