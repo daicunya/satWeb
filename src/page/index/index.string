@@ -3,7 +3,7 @@
 <div class="p-bnr-wrap" id="banner-wrap">
   <ul class="p-bnr-list" id="banner-list">
     {{#banner}}
-      <li><a href={{url}}><img src=http://sat.com{{pic}} alt={{alt}}></a></li>
+      <li><a href="{{url}}"><img src="http://www.thinkusat.com{{pic}}" alt="{{alt}}"></a></li>
     {{/banner}}
   </ul>
 </div>
@@ -16,8 +16,8 @@
   <ul class="p-index-ul pubClass-cnt clearfix">
     {{#publicClass}}
       <li class="item">
-        <a href=./info-details.html?id={{id}}>
-          <div><img src={{pic}} alt="公开课图片"></div>
+        <a href="./info-details.html?id={{id}}">
+          <div><img src="http://www.thinkusat.com{{pic}}" alt="公开课图片"></div>
           <p>{{title}}</p>
         </a>
       </li>
@@ -31,7 +31,7 @@
   </h2>
   <ul class="p-index-ul topic-cnt clearfix">
     <li class="item">
-      <a href=./exercise.html>
+      <a href="./exercise.html">
         <img src="../../../images/index-exer01.jpg" alt="公开课图片">
         <div class="topic-icon">
           <p><i class="fa fa-eye"></i></p>
@@ -40,7 +40,7 @@
       </a>
     </li>
     <li class="item">
-      <a href=./exercise.html>
+      <a href="./exercise.html">
         <img src="../../../images/index-exer02.jpg" alt="公开课图片">
         <div class="topic-icon">
           <p><i class="fa fa-font"></i></p>
@@ -49,7 +49,7 @@
       </a>
     </li>
     <li class="item">
-      <a href=./exercise.html>
+      <a href="./exercise.html">
         <img src="../../../images/index-exer03.jpg" alt="公开课图片">
         <div class="topic-icon">
           <p><i class="fa fa-plus"></i></p>
@@ -58,7 +58,7 @@
       </a>
     </li>
     <li class="item">
-      <a href=./mock.html>
+      <a href="./mock.html">
         <img src="../../../images/index-exer04.jpg" alt="公开课图片">
         <div class="topic-icon">
           <p><i class="fa fa-pencil"></i></p>
@@ -77,7 +77,7 @@
   <ul class="p-index-ul course-cnt clearfix">
     {{#class}}
       <li class="item">
-        <a href=./course-details.html?id={{id}}>
+        <a href="./course-details.html?id={{id}}">
           <img src="../../../images/index-course01.jpg" alt="公开课图片">
           <div class="topic-icon">
             <p><i class="fa fa-eye"></i></p>
@@ -97,8 +97,8 @@
   <ul class="p-index-ul p-bnr-list teacher-cnt clearfix" id="teacherList">
     {{#teacher}}
       <li class="item">
-        <a href=./teacher-details.html?id={{id}}>
-          <img src={{pic}} alt="老师图片">
+        <a href="./teacher-details.html?id={{id}}">
+          <img src="http://www.thinkusat.com{{pic}}" alt="老师图片">
           <p>{{name}}:{{subject}}</p>
         </a>
       </li>
@@ -119,9 +119,9 @@
   <ul class="info-wrap">
     {{#news}}
       <li>
-        <a href=./info-details.html?id={{id}} data-id={{id}}>
+        <a href="./info-details.html?id={{id}}" data-id="{{id}}">
           <div class="p-info-img">
-            <img src={{pic}} alt="图片">
+            <img src="http://www.thinkusat.com{{pic}}" alt="图片">
           </div>
           <div href="#" class="p-info-text">
             <h2>{{title}}</h2>

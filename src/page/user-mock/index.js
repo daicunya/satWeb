@@ -66,7 +66,8 @@ var _userMock = {
         type : 'post',
         data : data,
         dataType : 'json',
-        beforeSend : function () {
+        beforeSend : function (xhr) {
+          xhr.withCredentials = true;
           $this.html('加载中……');
         },
         success : function (res) {

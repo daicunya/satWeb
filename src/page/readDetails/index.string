@@ -16,13 +16,13 @@
 <li class="exer-cnt-item read-ti">
   <!--问题-->
   {{#data}}
-    <div class="read-question" data-qid={{qid}} data-num={{number}}>
+    <div class="read-question" data-qid="{{qid}}" data-num="{{number}}">
       <span class="fl">{{number}}.</span>
       <div>{{{content}}}</div>
     </div>
     <!--答案选项-->
     {{^isFilling}}
-        <ul class='select-wrap'>
+        <ul class="select-wrap">
           <li class="read-li clearfix" data-ans="A">
             <div class="read-select fl"></div>
             <div class="read-answer">{{{keyA}}}</div>
@@ -102,15 +102,15 @@
   {{/data}}
   {{#data}}
     {{#section}}
-      <input type="hidden" id="j-section" data-sec={{section}}>
+      <input type="hidden" id="j-section" data-sec="{{section}}">
     {{/section}}
   {{/data}}
   <!--用以判断模考是否进入下一小节-->
   {{#nextId}}
-    <input type="hidden" id="j-nextId" data-next={{nextId}}>
+    <input type="hidden" id="j-nextId" data-next="{{nextId}}">
   {{/nextId}}
   {{^nextId}}
-     <input type="hidden" id="j-nextSection" data-next={{nextSection}}>
+     <input type="hidden" id="j-nextSection" data-next="{{nextSection}}">
   {{/nextId}}
 </li>
 <!--弹窗-->
@@ -130,14 +130,14 @@
 </div>
 {{#data}}
   {{#section}}
-    <input type="hidden" id="j-section" data-sec={{section}}>
+    <input type="hidden" id="j-section" data-sec="{{section}}">
   {{/section}}
   {{#tpId}}
-    <input type="hidden" id="j-tpId" data-tpid={{tpId}}>
+    <input type="hidden" id="j-tpId" data-tpid="{{tpId}}">
   {{/tpId}}
   {{#id}}
-    <input type="hidden" id="j-id" data-id={{id}}>
+    <input type="hidden" id="j-id" data-id="{{id}}">
   {{/id}}
-  <input type="hidden" id="j-major" data-major={{major}}>
+  <input type="hidden" id="j-major" data-major="{{major}}">
 {{/data}}
 {{/dataList}}

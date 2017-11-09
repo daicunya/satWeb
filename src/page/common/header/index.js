@@ -4,7 +4,6 @@
 'use strict';
 
 require('./index.styl');
-// var $ = require('util/js/zepto.min.js');
 
 var _header = {
   init: function () {
@@ -13,7 +12,7 @@ var _header = {
   },
   onLoad: function () {
     var title = $('title').html();
-    $('.p-title').html(title);
+    $('.p-title').html(title.split('--')[0]);
     // var tName = window.location.pathname;
     // if (tName.indexOf('exercise') != -1) {
     //   $('.p-title').html('练习');

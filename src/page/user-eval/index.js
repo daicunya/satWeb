@@ -47,7 +47,6 @@ var _center = {
   loadTemp : function () {
     var rendHtml  = '';
     _userService.userEval('',function (res) {
-      console.log(res);
       $.each(res.data.data,function (i,data) {
         data.date = new Date(parseInt(data.date) * 1000).toLocaleString('chinese',{hour12:false}).replace(/[/]/g,'-');
       });
@@ -69,7 +68,8 @@ var _center = {
           p: p
         },
         dataType: 'json',
-        beforeSend: function () {
+        beforeSend : function (xhr) {
+          xhr.withCredentials = true;
           $this.html('加载中……');
         },
         success: function (res) {

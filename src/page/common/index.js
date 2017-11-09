@@ -15,8 +15,8 @@ var _public = {
   },
   onLoad : function () {
     var url = window.location.href;
-    if (url == 'http://localhost:8080/dist/view') {
-      location.href = 'http://localhost:8080/dist/view/index.html';
+    if (url == 'http://m.thinkusat.com/dist/view') {
+      location.href = 'http://m.thinkusat.com/dist/view/index.html';
     }
   },
   bindEvent: function () {
@@ -38,7 +38,7 @@ $(function () {
   _public.init();
 });
 window.onscroll = function () {
-  if ($('html').scrollTop() >= $('html').height()/2) {
+  if ($('html').scrollTop() >= $('html').height()/3) {
     $('.p-to-top').show();
   } else {
     $('.p-to-top').hide();

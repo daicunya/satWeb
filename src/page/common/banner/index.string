@@ -1,5 +1,5 @@
 {{#dataList}}
   {{#banner}}
-  <li><img src={{pic}} alt={{alt}}/></li>
+  <li><img src="//thinkusat.com{{pic}}" alt="{{alt}}"/></li>
   {{/banner}}
 {{/dataList}}

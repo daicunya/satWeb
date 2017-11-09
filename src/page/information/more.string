@@ -2,9 +2,9 @@
 {{#data}}
 {{#data}}
 <li class="p-info-item">
-  <a href=./info-details.html?id={{id}} data-id={{id}}>
+  <a href="./info-details.html?id={{id}}" data-id="{{id}}">
     <div class="p-info-img">
-      <img src={{pic}} alt="图片">
+      <img src="http://www.thinkusat.com{{pic}}" alt="图片">
     </div>
     <div href="#" class="p-info-text">
       <h2>{{title}}</h2>

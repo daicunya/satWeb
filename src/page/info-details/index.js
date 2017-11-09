@@ -16,10 +16,15 @@ $(function () {
     rendHtml = _util.renderHtml(templateInfo,{
       dataList : res
     });
-    console.log(res);
     $('.info-wrap').html(rendHtml);
+    var num = $('.info-article img').length,
+        arr = [];
+    for (var i=0;i<num;i++) {
+      arr.push($('.info-article img').eq(i).attr('src'));
+      $('.info-article img').eq(i).attr('src',"http://www.thinkusat.com"+arr[i]);
+    }
     if (res.cate == '公开课') {
-      $('.info-img img').attr('src','../../../images/banner/003.jpg')
+      $('.info-img img').attr('src','../../../images/index-course02.jpg')
     }
   })
 })

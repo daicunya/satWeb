@@ -9,13 +9,13 @@
           <h3>{{name}}-{{time}}-{{major}}</h3>
           <p>{{{content}}}</p>
         </div>
-        <a class="user-report" data-id={{qid}} href=./readdetails.html?type=exercise&major=Reading&qid={{qid}}>查看详情</a>
-        <input type="button" value="删除" data-id={{qid}} class="user-delete">
+        <a class="user-report" data-id="{{qid}}" href="./readdetails.html?type=exercise&major=Reading&qid={{qid}}">查看详情</a>
+        <input type="button" value="删除" data-id="{{qid}}" class="user-delete">
       </dd>
       {{/data}}
     </dl>
     <!--分页-->
-    <div class="p-info-more news-more" data-p={{ReadingCurrent}} data-all={{ReadingPage}}>浏览更多</div>
+    <div class="p-info-more news-more" data-p="{{ReadingCurrent}}" data-all="{{ReadingPage}}">浏览更多</div>
     <p class="p-info-bottom">我是有底线的</p>
     {{/Reading}}
   </li>
@@ -28,13 +28,13 @@
           <h3>{{name}}-{{time}}-{{major}}</h3>
           <p>{{{content}}}</p>
         </div>
-        <a class="user-report" data-id={{qid}} href=./readdetails.html?type=exercise&major=Writing&qid={{qid}}>查看详情</a>
-        <input type="button" value="删除" data-id={{qid}} class="user-delete">
+        <a class="user-report" data-id="{{qid}}" href="./readdetails.html?type=exercise&major=Writing&qid={{qid}}">查看详情</a>
+        <input type="button" value="删除" data-id="{{qid}}" class="user-delete">
       </dd>
       {{/data}}
     </dl>
     <!--分页-->
-    <div class="p-info-more news-more" data-p={{WritingCurrent}} data-all={{WritingPage}}>浏览更多</div>
+    <div class="p-info-more news-more" data-p="{{WritingCurrent}}" data-all="{{WritingPage}}">浏览更多</div>
     <p class="p-info-bottom">我是有底线的</p>
     {{/Writing}}
   </li>
@@ -47,13 +47,13 @@
           <h3>{{name}}-{{time}}-{{major}}</h3>
           <p>{{{content}}}</p>
         </div>
-        <a class="user-report" data-id={{qid}} href=./readdetails.html?type=exercise&major=Math1&qid={{qid}}>查看详情</a>
-        <input type="button" value="删除" data-id={{qid}} class="user-delete">
+        <a class="user-report" data-id="{{qid}}" href="./readdetails.html?type=exercise&major=Math1&qid={{qid}}">查看详情</a>
+        <input type="button" value="删除" data-id="{{qid}}" class="user-delete">
       </dd>
       {{/data}}
     </dl>
     <!--分页-->
-    <div class="p-info-more news-more" data-p={{MathCurrent}} data-all={{MathPage}}>浏览更多</div>
+    <div class="p-info-more news-more" data-p="{{MathCurrent}}" data-all="{{MathPage}}">浏览更多</div>
     <p class="p-info-bottom">我是有底线的</p>
     {{/Math}}
   </li>

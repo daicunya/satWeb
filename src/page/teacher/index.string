@@ -1,8 +1,8 @@
 {{#dataList}}
   <li class="teacher-item">
-    <a href=./teacher-details.html?id={{id}}>
+    <a href="./teacher-details.html?id={{id}}">
       <div class="teacher-img">
-        <img src={{pic}} alt="图片">
+        <img src="http://www.thinkusat.com{{pic}}" alt="图片">
       </div>
       <div class="teacher-wrap">
         <h3>{{name}}</h3>

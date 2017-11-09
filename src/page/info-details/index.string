@@ -1,6 +1,6 @@
 {{#dataList}}
   <div class="info-img">
-    <img src={{pic}} alt="图片">
+    <img src="http://www.thinkusat.com{{pic}}" alt="图片">
     <p class="clearfix">
       <span class="fl"><i class="fa fa-clock-o"></i>{{publishTime}}</span>
       <span class="fr"><i class="fa fa-commenting-o"></i>{{hits}}</span>
@@ -21,7 +21,7 @@
     </div>
     <ul class="info-extend-list">
       {{#recommend}}
-        <li class="info-extend-item"><a href=./info-details.html?id={{id}}>{{title}}</a></li>
+        <li class="info-extend-item"><a href="./info-details.html?id={{id}}">{{title}}</a></li>
       {{/recommend}}
     </ul>
   </div>

@@ -5,11 +5,11 @@
     <ul>
       {{#data}}
       <li class="p-info-item">
-        <a href=./info-details.html?id={{id}} data-id={{id}}>
+        <a href="./info-details.html?id={{id}}" data-id="{{id}}">
           <div class="p-info-img">
-            <img src={{pic}} alt="">
+            <img src="http://www.thinkusat.com{{pic}}" alt="">
           </div>
-          <div href="#" class="p-info-text">
+          <div class="p-info-text">
             <h2>{{title}}</h2>
             <blockquote class="p-ic-wrap clearfix">
               <i class="fl">{{publishTime}}</i>
@@ -23,7 +23,7 @@
       </li>
       {{/data}}
     </ul>
-    <div class="p-info-more news-more" data-p={{Current}} data-all={{Page}}>浏览更多</div>
+    <div class="p-info-more news-more" data-p="{{Current}}" data-all="{{Page}}">浏览更多</div>
     <p class="p-info-bottom">我是有底线的</p>
     {{/news}}
   </li>
@@ -33,9 +33,9 @@
     <ul>
       {{#data}}
       <li class="p-info-item">
-        <a href=./info-details.html?id={{id}} data-id={{id}}>
+        <a href="./info-details.html?id={{id}}" data-id="{{id}}">
           <div class="p-info-img">
-            <img src={{pic}} alt="">
+            <img src="http://www.thinkusat.com{{pic}}" alt="">
           </div>
           <div href="#" class="p-info-text">
             <h2>{{title}}</h2>
@@ -51,7 +51,7 @@
       </li>
       {{/data}}
     </ul>
-    <div class="p-info-more news-more" data-p={{Current}} data-all={{Page}}>浏览更多</div>
+    <div class="p-info-more news-more" data-p="{{Current}}" data-all="{{Page}}">浏览更多</div>
     <p class="p-info-bottom">我是有底线的</p>
     {{/report}}
   </li>
@@ -61,9 +61,9 @@
     <ul>
       {{#data}}
       <li class="p-info-item">
-        <a href=./info-details.html?id={{id}} data-id={{id}}>
+        <a href="./info-details.html?id={{id}}" data-id="{{id}}">
           <div class="p-info-img">
-            <img src={{pic}} alt="">
+            <img src="http://www.thinkusat.com{{pic}}" alt="">
           </div>
           <div href="#" class="p-info-text">
             <h2>{{title}}</h2>
@@ -79,7 +79,7 @@
       </li>
       {{/data}}
     </ul>
-    <div class="p-info-more news-more" data-p={{Current}} data-all={{Page}}>浏览更多</div>
+    <div class="p-info-more news-more" data-p="{{Current}}" data-all="{{Page}}">浏览更多</div>
     <p class="p-info-bottom">我是有底线的</p>
     {{/experience}}
   </li>

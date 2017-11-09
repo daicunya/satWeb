@@ -4,9 +4,9 @@
   <ul class="course clearfix">
     {{#class}}
     <li class="course-list">
-      <a href=./course-details.html?id={{id}}>
+      <a href="./course-details.html?id={{id}}">
         <div class="course-img">
-          <img src={{pic}} alt="图片">
+          <img src="http://www.thinkusat.com{{pic}}" alt="图片">
         </div>
         <p>{{cate}}</p>
       </a>

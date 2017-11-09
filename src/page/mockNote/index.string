@@ -2,7 +2,7 @@
   {{^evaulation}}
   <ul class="m-note-ul mock-general">
     {{#Reading}}
-      <li><i class='fa'></i>阅读部分:共{{count}}题,{{time}}分钟</li>
+      <li><i class="fa"></i>阅读部分:共{{count}}题,{{time}}分钟</li>
     {{/Reading}}
     {{#Writing}}
       <li><i></i>文法部分:共{{count}}题,{{time}}分钟</li>

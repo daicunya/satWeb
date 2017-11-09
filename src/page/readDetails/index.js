@@ -19,6 +19,7 @@ var _mockDetail = {
   data : {
     type : _util.getUrlParam('type') || '',
     qid  : _util.getUrlParam('qid')  || '',//个人中心、报告进入的会有qid
+    width : $('html').width(),
     listParam : {
       major : _util.getUrlParam('major') || '',
       num : _util.getUrlParam('num') || '',
@@ -279,6 +280,23 @@ var _mockDetail = {
       _this.lineEvent(res);//添加行号
       _this.showTag(res);//默认显示原文或题目
       _this.timeEvent('exercise');
+      //图片添加域名
+      var num1 = $('.read-original img').length,
+          num2 = $('.read-ti .read-question img').length,
+          arr1 = [],
+          arr2 = [];
+      for (var i=0;i<num1;i++) {
+        arr1.push($('.read-original img').eq(i).attr('src'));
+        $('.read-original img').eq(i).attr('src',"http://www.thinkusat.com"+arr1[i]);
+      }
+      for (var i=0;i<num2;i++) {
+        arr2.push($('.read-ti .read-question img').eq(i).attr('src'));
+        $('.read-ti .read-question img').eq(i).attr('src',"http://www.thinkusat.com"+arr2[i]);
+        console.log($('.read-ti .read-question img').eq(i).width());
+        if ($('.read-ti .read-question img').eq(i).width() >= _this.data.width) {
+          $('.read-ti .read-question img').eq(i).width('90%');
+        }
+      }
       //做过的题目直接显示答案
       if (res.userans) {
         if (res.userans == 'A') {
@@ -327,7 +345,6 @@ var _mockDetail = {
       pos       : flag
     };
     _topicService.nextDetails(listParam,function (res) {
-      console.log(res);
       var major = _this.data.listParam.major;
       if ((major == 'Math1') || (major == 'Math2')){
         if (res.data.essay) {
@@ -347,6 +364,23 @@ var _mockDetail = {
           dataList : res
         });
         _$readti.html(readHtml);
+      }
+      //图片添加域名
+      var num1 = $('.read-original img').length,
+          num2 = $('.read-ti .read-question img').length,
+          arr1 = [],
+          arr2 = [];
+      for (var i=0;i<num1;i++) {
+        arr1.push($('.read-original img').eq(i).attr('src'));
+        $('.read-original img').eq(i).attr('src',"http://www.thinkusat.com"+arr1[i]);
+      }
+      for (var i=0;i<num2;i++) {
+        arr2.push($('.read-ti .read-question img').eq(i).attr('src'));
+        $('.read-ti .read-question img').eq(i).attr('src',"http://www.thinkusat.com"+arr2[i]);
+        console.log($('.read-ti .read-question img').eq(i).width());
+        if ($('.read-ti .read-question img').eq(i).width() >= _this.data.width) {
+          $('.read-ti .read-question img').eq(i).width('90%');
+        }
       }
       //做过的题目不再重新计时
       if (!res.userTime) {
@@ -529,6 +563,22 @@ var _mockDetail = {
       $('.read-ul .read-check').hide();
       $('.read-analytic').hide();
       $('.read-ul .read-progress i').hide();
+      //图片添加域名
+      var num1 = $('.read-original img').length,
+          num2 = $('.read-ti .read-question img').length,
+          arr1 = [],
+          arr2 = [];
+      for (var i=0;i<num1;i++) {
+        arr1.push($('.read-original img').eq(i).attr('src'));
+        $('.read-original img').eq(i).attr('src',"http://www.thinkusat.com"+arr1[i]);
+      }
+      for (var i=0;i<num2;i++) {
+        arr2.push($('.read-ti .read-question img').eq(i).attr('src'));
+        $('.read-ti .read-question img').eq(i).attr('src',"http://www.thinkusat.com"+arr2[i]);
+        if ($('.read-ti .read-question img').eq(i).width() >= _this.data.width) {
+          $('.read-ti .read-question img').eq(i).width('90%');
+        }
+      }
       //判断显示下一题还是提交
       if ((!res.nextId)&&(!res.nextSection)) {
         $('.read-next').hide();
@@ -624,7 +674,6 @@ var _mockDetail = {
       rendHtml = _util.renderHtml(templateIndex,{
         dataList : res
       });
-      // var major = res.data.major;
       $('.read-ul').html(rendHtml);
       _this.showTag(res);
       $('.read-ul .read-check').hide();
@@ -633,6 +682,22 @@ var _mockDetail = {
       if (res.data.major == "Translation") {
         $('.math-gap').hide();
         $('.textarea-gap').show();
+      }
+      //图片添加域名
+      var num1 = $('.read-original img').length,
+          num2 = $('.read-ti .read-question img').length,
+          arr1 = [],
+          arr2 = [];
+      for (var i=0;i<num1;i++) {
+        arr1.push($('.read-original img').eq(i).attr('src'));
+        $('.read-original img').eq(i).attr('src',"http://www.thinkusat.com"+arr1[i]);
+      }
+      for (var i=0;i<num2;i++) {
+        arr2.push($('.read-ti .read-question img').eq(i).attr('src'));
+        $('.read-ti .read-question img').eq(i).attr('src',"http://www.thinkusat.com"+arr2[i]);
+        if ($('.read-ti .read-question img').eq(i).width() >= _this.data.width) {
+          $('.read-ti .read-question img').eq(i).width('90%');
+        }
       }
       //判断显示下一题还是提交
       if ((!res.nextId)&&(!res.nextSection)) {
@@ -663,7 +728,9 @@ var _mockDetail = {
       number    : $('.read-question').data('num'),
       time      : sessionStorage.getItem('alltime')
     };
-    _topicService.evalNext(listParam, function (res) {});
+    _topicService.evalNext(listParam, function (res) {
+
+    });
     window.location.href = './report.html?type=evaluation';
   }
 };

@@ -7,8 +7,8 @@
           <h3>{{name}}-{{time}}</h3>
           <p><i class="fa fa-clock-o"></i>{{date}} {{rtime}}</p>
         </div>
-        <a class="user-report" data-id={{id}} href="#">查看报告</a>
-        <input type="button" value="删除" data-id={{id}} class="user-delete">
+        <a class="user-report" data-id="{{id}}" href="#">查看报告</a>
+        <input type="button" value="删除" data-id="{{id}}" class="user-delete">
       </dd>
     {{/data}}
   {{/all}}

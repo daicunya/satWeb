@@ -1,6 +1,6 @@
 {{#dataList}}
   <div class="report-img">
-    <img src="/images/banner/001.jpg" alt="">
+    <img src="../../../images/index-course01.jpg" alt="">
   </div>
   <ul class="report-correct">
     {{#que}}
@@ -117,6 +117,6 @@
     <a class="report-go-list" href="#">返回列表</a>
   </div>
   {{#res}}
-    <input type="hidden" id="j-report-major" data-major={{part}}>
+    <input type="hidden" id="j-report-major" data-major="{{part}}">
   {{/res}}
 {{/dataList}}

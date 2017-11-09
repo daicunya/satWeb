@@ -2,9 +2,9 @@
   <ul class="course-list">
     {{#class}}
       <li class="course-item">
-        <a href=./course-details.html?id={{id}}>
+        <a href="./course-details.html?id={{id}}">
           <div class="course-img">
-            <img src={{pic}} alt="课程图片">
+            <img src="http://www.thinkusat.com{{pic}}" alt="{{alt}}">
           </div>
           <div class="course-text">
             <h2>{{cate}}</h2>

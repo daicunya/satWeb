@@ -4,8 +4,8 @@
   <dl class="exer-dl">
     <dt>OG</dt>
     {{#OG}}
-      <dd data-tpId={{tpId}}>
-        <a class="j-inner-div clearfix border-1px" href='./mockNote.html?type=mock&tpId={{tpId}}'>
+      <dd data-tpId="{{tpId}}">
+        <a class="j-inner-div clearfix border-1px" href="./mockNote.html?type=mock&tpId={{tpId}}">
           <span class="fl">{{name}}</span>
           <span class="fr"><i class="fa fa-angle-right"></i></span>
         </a>
@@ -15,8 +15,8 @@
   <dl class="exer-dl">
     <dt>普林斯顿</dt>
     {{#princeton}}
-      <dd data-tpId={{tpId}}>
-        <a class="j-inner-div clearfix border-1px" href='./mockNote.html?type=mock&tpId={{tpId}}'>
+      <dd data-tpId="{{tpId}}">
+        <a class="j-inner-div clearfix border-1px" href="./mockNote.html?type=mock&tpId={{tpId}}">
           <span class="fl">{{name}}</span>
           <span class="fr"><i class="fa fa-angle-right"></i></span>
         </a>
@@ -26,8 +26,8 @@
   <dl class="exer-dl">
     <dt>开普兰</dt>
     {{#kaplan}}
-    <dd data-tpId={{tpId}}>
-      <a class="j-inner-div clearfix border-1px" href='./mockNote.html?type=mock&tpId={{tpId}}'>
+    <dd data-tpId="{{tpId}}">
+      <a class="j-inner-div clearfix border-1px" href="./mockNote.html?type=mock&tpId={{tpId}}">
         <span class="fl">{{name}}</span>
         <span class="fr"><i class="fa fa-angle-right"></i></span>
       </a>
@@ -37,8 +37,8 @@
   <dl class="exer-dl">
     <dt>BARRON</dt>
     {{#BARRON}}
-    <dd data-tpId={{tpId}}>
-      <a class="j-inner-div clearfix border-1px" href='./mockNote.html?type=mock&tpId={{tpId}}'>
+    <dd data-tpId="{{tpId}}">
+      <a class="j-inner-div clearfix border-1px" href="./mockNote.html?type=mock&tpId={{tpId}}">
         <span class="fl">{{name}}</span>
         <span class="fr"><i class="fa fa-angle-right"></i></span>
       </a>
@@ -53,32 +53,32 @@
   <dl class="exer-dl j-mock-item active">
     <dt data-major="reading">阅读</dt>
     {{#OG}}
-      <dd data-tpId={{tpId}}>
-        <a class="j-inner-div clearfix border-1px" href='./mockNote.html?type=mock&major=Reading&tpId={{tpId}}'>
+      <dd data-tpId="{{tpId}}">
+        <a class="j-inner-div clearfix border-1px" href="./mockNote.html?type=mock&major=Reading&tpId={{tpId}}">
           <span class="fl">{{name}}</span>
           <span class="fr"><i class="fa fa-angle-right"></i></span>
         </a>
       </dd>
     {{/OG}}
     {{#princeton}}
-    <dd data-tpId={{tpId}}>
-      <a class="j-inner-div clearfix border-1px" href='./mockNote.html?type=mock&major=Reading&tpId={{tpId}}'>
+    <dd data-tpId="{{tpId}}">
+      <a class="j-inner-div clearfix border-1px" href="./mockNote.html?type=mock&major=Reading&tpId={{tpId}}">
         <span class="fl">{{name}}</span>
         <span class="fr"><i class="fa fa-angle-right"></i></span>
       </a>
     </dd>
     {{/princeton}}
     {{#kaplan}}
-    <dd data-tpId={{tpId}}>
-      <a class="j-inner-div clearfix border-1px" href='./mockNote.html?type=mock&major=Reading&tpId={{tpId}}'>
+    <dd data-tpId="{{tpId}}">
+      <a class="j-inner-div clearfix border-1px" href="./mockNote.html?type=mock&major=Reading&tpId={{tpId}}">
         <span class="fl">{{name}}</span>
         <span class="fr"><i class="fa fa-angle-right"></i></span>
       </a>
     </dd>
     {{/kaplan}}
     {{#BARRON}}
-    <dd data-tpId={{tpId}}>
-      <a class="j-inner-div clearfix border-1px" href='./mockNote.html?type=mock&major=Reading&tpId={{tpId}}'>
+    <dd data-tpId="{{tpId}}">
+      <a class="j-inner-div clearfix border-1px" href="./mockNote.html?type=mock&major=Reading&tpId={{tpId}}">
         <span class="fl">{{name}}</span>
         <span class="fr"><i class="fa fa-angle-right"></i></span>
       </a>
@@ -88,32 +88,32 @@
   <dl class="exer-dl j-mock-item">
     <dt data-major="writing">文法</dt>
     {{#OG}}
-    <dd data-tpId={{tpId}}>r
-      <a class="j-inner-div clearfix border-1px" href='./mockNote.html?type=mock&major=Writing&tpId={{tpId}}'>
+    <dd data-tpId="{{tpId}}">
+      <a class="j-inner-div clearfix border-1px" href="./mockNote.html?type=mock&major=Writing&tpId={{tpId}}">
         <span class="fl">{{name}}</span>
         <span class="fr"><i class="fa fa-angle-right"></i></span>
       </a>
     </dd>
     {{/OG}}
     {{#princeton}}
-    <dd data-tpId={{tpId}}>
-      <a class="j-inner-div clearfix border-1px" href='./mockNote.html?type=mock&major=Writing&tpId={{tpId}}'>
+    <dd data-tpId="{{tpId}}">
+      <a class="j-inner-div clearfix border-1px" href="./mockNote.html?type=mock&major=Writing&tpId={{tpId}}">
         <span class="fl">{{name}}</span>
         <span class="fr"><i class="fa fa-angle-right"></i></span>
       </a>
     </dd>
     {{/princeton}}
     {{#kaplan}}
-    <dd data-tpId={{tpId}}>
-      <a class="j-inner-div clearfix border-1px" href='./mockNote.html?type=mock&major=Writing&tpId={{tpId}}'>
+    <dd data-tpId="{{tpId}}">
+      <a class="j-inner-div clearfix border-1px" href="./mockNote.html?type=mock&major=Writing&tpId={{tpId}}">
         <span class="fl">{{name}}</span>
         <span class="fr"><i class="fa fa-angle-right"></i></span>
       </a>
     </dd>
     {{/kaplan}}
     {{#BARRON}}
-    <dd data-tpId={{tpId}}>
-      <a class="j-inner-div clearfix border-1px" href='./mockNote.html?type=mock&major=Writing&tpId={{tpId}}'>
+    <dd data-tpId="{{tpId}}">
+      <a class="j-inner-div clearfix border-1px" href="./mockNote.html?type=mock&major=Writing&tpId={{tpId}}">
         <span class="fl">{{name}}</span>
         <span class="fr"><i class="fa fa-angle-right"></i></span>
       </a>
@@ -123,32 +123,32 @@
   <dl class="exer-dl j-mock-item">
     <dt data-major="math">数学</dt>
     {{#OG}}
-    <dd data-tpId={{tpId}}>
-      <a class="j-inner-div clearfix border-1px" href='./mockNote.html?type=mock&major=Math&tpId={{tpId}}'>
+    <dd data-tpId="{{tpId}}">
+      <a class="j-inner-div clearfix border-1px" href="./mockNote.html?type=mock&major=Math&tpId={{tpId}}">
         <span class="fl">{{name}}</span>
         <span class="fr"><i class="fa fa-angle-right"></i></span>
       </a>
     </dd>
     {{/OG}}
     {{#princeton}}
-    <dd data-tpId={{tpId}}>
-      <a class="j-inner-div clearfix border-1px" href='./mockNote.html?type=mock&major=Math&tpId={{tpId}}'>
+    <dd data-tpId="{{tpId}}"">
+      <a class="j-inner-div clearfix border-1px" href="./mockNote.html?type=mock&major=Math&tpId={{tpId}}">
         <span class="fl">{{name}}</span>
         <span class="fr"><i class="fa fa-angle-right"></i></span>
       </a>
     </dd>
     {{/princeton}}
     {{#kaplan}}
-    <dd data-tpId={{tpId}}>
-      <a class="j-inner-div clearfix border-1px" href='./mockNote.html?type=mock&major=Math&tpId={{tpId}}'>
+    <dd data-tpId="{{tpId}}">
+      <a class="j-inner-div clearfix border-1px" href="./mockNote.html?type=mock&major=Math&tpId={{tpId}}">
         <span class="fl">{{name}}</span>
         <span class="fr"><i class="fa fa-angle-right"></i></span>
       </a>
     </dd>
     {{/kaplan}}
     {{#BARRON}}
-    <dd data-tpId={{tpId}}>
-      <a class="j-inner-div clearfix border-1px" href='./mockNote.html?type=mock&major=Math&tpId={{tpId}}'>
+    <dd data-tpId="{{tpId}}">
+      <a class="j-inner-div clearfix border-1px" href="./mockNote.html?type=mock&major=Math&tpId={{tpId}}">
         <span class="fl">{{name}}</span>
         <span class="fr"><i class="fa fa-angle-right"></i></span>
       </a>

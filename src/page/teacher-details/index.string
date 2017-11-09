@@ -3,7 +3,7 @@
   <div class="wrap">
     <div class="wrap-cnt">
       <div class="img">
-        <img src="{{pic}} alt="图片">
+        <img src="http://www.thinkusat.com{{pic}}" alt="图片">
       </div>
       <div class="name">
         <h3 class="border-1px">{{name}}</h3>

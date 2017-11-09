@@ -8,7 +8,6 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 //环境变量配置
 var WEBPACK_ENV = process.env.WEBPACK_ENV || 'dev';
-// console.log(WEBPACK_ENV);
 
 //获取html-webpack-plugin 参数的方法
 var getHtmlConfig = function (name,title) {
@@ -57,8 +56,9 @@ var config = {
   },
   //output: 目标文件
   output: {
-    path        : path.resolve(__dirname, "dist"),
-    publicPath  : '/dist/',
+    path        : __dirname + '/dist/',
+    publicPath  : 'dev' === WEBPACK_ENV ? '/dist/' : '//m.thinkusat.com/dist/',
+    // publicPath  : '/dist/',
     filename    : 'js/[name].js'
   },
   //externals:外部依赖的声明
@@ -70,7 +70,14 @@ var config = {
       { test: /\.css$/, use: ['style-loader','css-loader']},
       { test: /\.styl$/, use:  ExtractTextPlugin.extract({ fallback: 'style-loader', use: ['css-loader','stylus-loader'] })},
       { test: /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/, loader: 'url-loader?limit=1000&name=resource/[name].[ext]'},
-      { test: /\.string$/,loader: 'html-loader' }
+      {
+        test: /\.string$/,
+        loader: 'html-loader',
+        query : {
+          minimize : true,
+          removeAttributeQuotes : false
+        }
+      }
     ]
   },
   resolve : {
@@ -123,6 +130,5 @@ var config = {
 };
 if ('dev' === WEBPACK_ENV) {
   config.entry.common.push('webpack-dev-server/client?http://localhost:8080/');
-  // config.entry.common.push('webpack-dev-server/client?http://192.168.1.38:8080/');
 }
 module.exports = config;
