@@ -10,14 +10,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/daicunya/satWeb.git"
+//    "url": "git+https://github.com/daicunya/satWeb.git"
+    "url": "git+https://github.com/sy-obelisk/sat-wap.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/daicunya/satWeb/issues"
+//    "url": "https://github.com/daicunya/satWeb/issues"
+    "url": "https://github.com/sy-obelisk/sat-wap/issues"
   },
-  "homepage": "https://github.com/daicunya/satWeb#readme",
+//  "homepage": "https://github.com/daicunya/satWeb#readme",
+  "homepage": "https://github.com/sy-obelisk/sat-wap#readme",
   "devDependencies": {
     "css-loader": "^0.28.7",
     "extract-text-webpack-plugin": "^2.1.2",

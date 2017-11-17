@@ -99,7 +99,7 @@
       <li class="item">
         <a href="./teacher-details.html?id={{id}}">
           <img src="http://www.thinkusat.com{{pic}}" alt="老师图片">
-          <p>{{name}}:{{subject}}</p>
+          <p>{{name}}: {{subject}}</p>
         </a>
       </li>
     {{/teacher}}

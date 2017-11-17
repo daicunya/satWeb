@@ -1,6 +1,6 @@
 {{#dataList}}
   <div class="report-img">
-    <img src="../../../images/index-course01.jpg" alt="">
+    <img src="../../../images/report01.png" alt="图片">
   </div>
   <ul class="report-correct">
     {{#que}}

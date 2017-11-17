@@ -58,7 +58,6 @@ var config = {
   output: {
     path        : __dirname + '/dist/',
     publicPath  : 'dev' === WEBPACK_ENV ? '/dist/' : '//m.thinkusat.com/dist/',
-    // publicPath  : '/dist/',
     filename    : 'js/[name].js'
   },
   //externals:外部依赖的声明
@@ -128,7 +127,7 @@ var config = {
     new HtmlWebpackPlugin(getHtmlConfig('about','关于我们'))
   ]
 };
-if ('dev' === WEBPACK_ENV) {
+if ('dev' === WEBPACK_ENV) {//开发环境下
   config.entry.common.push('webpack-dev-server/client?http://localhost:8080/');
 }
 module.exports = config;

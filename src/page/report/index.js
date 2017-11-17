@@ -64,13 +64,15 @@ var _report = {
   },
   //练习报告
   exerciseReport: function () {
-    var rendHtml = '';
+    var rendHtml = '',
+        _this    = this;
     _topicService.exerciseResult('',function (res) {
       rendHtml = _util.renderHtml(templateReport,{
         dataList  : res
       });
       $('.report').html(rendHtml);
       $('.report-go-list').attr('href','./exercise.html');
+      _this.changeImg(res.correctRate);
     },function (err) {
       console.log(err);
     })
@@ -80,7 +82,6 @@ var _report = {
     var rendHtml = '',
         _this    = this;
     _topicService.mockReport(_this.data.id,function (res) {
-      console.log(res);
       rendHtml = _util.renderHtml(templateReport,{
         dataList  : res
       });
@@ -90,6 +91,7 @@ var _report = {
       var l = $('.report-list').length;
       $('.report-mock-wrap').css('width',l*100+'%');
       _this.timeEvent(res.res.time);
+      _this.changeImg(res.que.correctRate);
     },function (err) {
       console.log(err);
     })
@@ -109,6 +111,7 @@ var _report = {
       var l = $('.report-list').length;
       $('.report-mock-wrap').css('width',l*100+'%');
       _this.timeEvent(res.report.time);
+      _this.changeImg(res.que.correctRate);
     },function (err) {
       console.log(err);
     })
@@ -122,6 +125,15 @@ var _report = {
   },
   checkTime     : function (i) {
     return i<10? '0'+i : i;
+  },
+  changeImg     : function (num) {
+    if ((0 < num) && (num < 60)) {
+        $('.report-img img').attr('src','../../../images/report01.png')
+    } else if ((60 <= num)&&(num < 80)){
+        $('.report-img img').attr('src','../../../images/report02.png')
+    }else {
+        $('.report-img img').attr('src','../../../images/report03.png')
+    }
   }
 };
 $(function () {

@@ -28,16 +28,14 @@ var _home = {
         dataList : res
       });
       $('.home-wrap').html(rendHtml);
-      new BannerWrap("#banner-wrap","#banner-list");
-      new BannerWrap("#teacherWrap","#teacherList",2);
-      for (var i=0;i<4;i++) {
+      new BannerWrap("#banner-wrap","#banner-list");//banner图
+      new BannerWrap("#teacherWrap","#teacherList",2);// 名师团队
+      for (var i=0;i<4;i++) {//循环推荐课程的图片
         $('.course-cnt .item').eq(i).find('img').attr('src','../../../images/index-course0'+(i+1)+'.jpg');
       }
-
     })
   }
 }
 $(function () {
-  // 渲染banner的html
   _home.init();
 })
